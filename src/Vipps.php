@@ -79,7 +79,6 @@ class Vipps implements VippsInterface
     {
         $this->environment = $environment ?: new Connection\Test();
         $this->setHttpClient($httpClient);
-        $this->generateRequestID();
     }
 
     /**
@@ -192,6 +191,11 @@ class Vipps implements VippsInterface
     public function request($method, $uri, array $payload = [])
     {
         try {
+            // If request id is empty, generate one.
+            if (!isset($this->requestID)) {
+                $this->generateRequestID();
+            }
+
             // Build request.
             $request = $this->buildRequest($method, $uri, $payload);
 
@@ -205,15 +209,20 @@ class Vipps implements VippsInterface
             // to fix it but as a temporary fix we are gonna check if body is
             // "invalid" and throw exception in case it is.
             $exception = new VippsException();
+            $exception->setRequestID($this->requestID);
             $exception->setErrorResponse($content);
             if ($exception->getErrorCode() || $exception->getErrorMessage()) {
                 throw $exception;
             }
 
+            // Remove request ID.
+            $this->requestID = null;
+
             // If everything is ok return content.
             return $content;
         } catch (HttpException $e) {
             $exception = new VippsException($e->getMessage(), $e->getCode());
+            $exception->setRequestID($this->requestID);
             $content = json_decode($e->getResponse()->getBody()->getContents());
             throw $exception->setErrorResponse($content);
         } catch (NetworkException $e) {

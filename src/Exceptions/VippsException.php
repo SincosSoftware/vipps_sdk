@@ -59,6 +59,13 @@ class VippsException extends \Exception
     protected $errorMessage;
 
     /**
+     * Request ID.
+     *
+     * @var string
+     */
+    protected $requestID;
+
+    /**
      * VippsException constructor.
      *
      * @param string $message
@@ -181,5 +188,24 @@ class VippsException extends \Exception
             return $codes[$code];
         }
         return null;
+    }
+
+    /**
+     * @param string $requestID
+     * @return VippsException
+     */
+    public function setRequestID($requestID)
+    {
+        $this->requestID = $requestID;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRequestID()
+    {
+        return $this->requestID;
     }
 }
