@@ -22,7 +22,20 @@ class MerchantInfo
      * @var string
      * @Serializer\Type("string")
      */
-    protected $callBack;
+    protected $callbackPrefix;
+
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
+    protected $fallBack;
+
+    /**
+     * @var boolean
+     * @Serializer\Type("boolean")
+     */
+    protected $isApp = false;
+
 
     /**
      * Gets merchantSerialNumber value.
@@ -54,7 +67,7 @@ class MerchantInfo
      */
     public function getCallBack()
     {
-        return $this->callBack;
+        return $this->callbackPrefix;
     }
 
     /**
@@ -66,7 +79,30 @@ class MerchantInfo
      */
     public function setCallBack($callBack)
     {
-        $this->callBack = $callBack;
+        $this->callbackPrefix = $callBack;
+        return $this;
+    }
+
+    /**
+     * Gets callBack value.
+     *
+     * @return string
+     */
+    public function getFallBack()
+    {
+        return $this->fallBack;
+    }
+
+    /**
+     * Sets callBack variable.
+     *
+     * @param string $fallback
+     *
+     * @return $this
+     */
+    public function setFallBack($fallback)
+    {
+        $this->fallBack = $fallback;
         return $this;
     }
 }

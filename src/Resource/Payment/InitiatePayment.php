@@ -23,7 +23,7 @@ class InitiatePayment extends PaymentResourceBase
     /**
      * @var string
      */
-    protected $path = '/Ecomm/v1/payments';
+    protected $path = '/Ecomm/v2/payments';
 
     /**
      * InitiatePayment constructor.
@@ -50,6 +50,7 @@ class InitiatePayment extends PaymentResourceBase
     {
         $response = $this->makeCall();
         $body = $response->getBody()->getContents();
+
         /** @var \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment $responseObject */
         $responseObject = $this
             ->getSerializer()

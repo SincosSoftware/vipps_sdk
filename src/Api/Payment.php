@@ -144,7 +144,7 @@ class Payment extends ApiBase implements PaymentInterface
     /**
      * {@inheritdoc}
      */
-    public function initiatePayment($order_id, $mobile_number, $amount, $text, $callback, $refOrderID = null)
+    public function initiatePayment($order_id, $mobile_number, $amount, $text, $callback, $fallback, $refOrderID = null)
     {
         // Create Request object based on data passed to this method.
         $request = (new RequestInitiatePayment())
@@ -156,6 +156,7 @@ class Payment extends ApiBase implements PaymentInterface
                 (new MerchantInfo())
                     ->setCallBack($callback)
                     ->setMerchantSerialNumber($this->getMerchantSerialNumber())
+                    ->setFallBack($fallback)
             )
             ->setTransaction(
                 (new Transaction())
@@ -166,9 +167,11 @@ class Payment extends ApiBase implements PaymentInterface
             );
         // Pass request object along with all data required by InitiatePayment
         // to make a call.
+
         $resource = new InitiatePayment($this->app, $this->getSubscriptionKey(), $request);
         /** @var \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment $response */
         $response = $resource->call();
+        //dd($response);
         return $response;
     }
 

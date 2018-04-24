@@ -55,7 +55,9 @@ class PaymentsTest extends IntegrationTestBase
             '98765432',
             1200,
             'test_text',
-            'https://www.example.com'
+            'https://www.example.com',
+            'https://www.example.com/fallback'
+
         );
 
         // Assert response.
@@ -78,7 +80,7 @@ class PaymentsTest extends IntegrationTestBase
     {
         $this->mockResponse(parent::getErrorResponse());
         $this->expectException(VippsException::class);
-        $this->api->initiatePayment('test_client_secret', '98765432', 1200, 'test_text', 'http://www.example.com');
+        $this->api->initiatePayment('test_client_secret', '98765432', 1200, 'test_text', 'http://www.example.com', 'http://www.example.com/fallback');
     }
 
     /**
