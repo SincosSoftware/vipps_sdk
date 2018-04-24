@@ -59,7 +59,7 @@ class InitiatePaymentTest extends PaymentResourceBaseTestBase
      */
     public function testPath()
     {
-        $this->assertEquals('/Ecomm/v1/payments', $this->resource->getPath());
+        $this->assertEquals('/Ecomm/v2/payments', $this->resource->getPath());
     }
 
     /**
