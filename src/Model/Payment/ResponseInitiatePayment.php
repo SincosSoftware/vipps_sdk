@@ -31,6 +31,12 @@ class ResponseInitiatePayment
     protected $transactionInfo;
 
     /**
+     * @var string
+     * @Serializer\Type("string")
+     */
+    protected $url;
+
+    /**
      * Gets orderId value.
      *
      * @return string
@@ -48,6 +54,16 @@ class ResponseInitiatePayment
     public function getMerchantSerialNumber()
     {
         return $this->merchantSerialNumber;
+    }
+
+    /**
+     * Gets url value.
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
     }
 
     /**
