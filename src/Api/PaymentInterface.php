@@ -52,7 +52,8 @@ interface PaymentInterface
      *
      * @return \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment
      */
-    public function initiatePayment($order_id, $mobile_number, $amount, $text, $callback, $fallback, $refOrderID = null);
+    public function initiatePayment($order_id, $mobile_number, $amount, $text, $callback, $fallback, $refOrderID = null
+    );
 
     /**
      * @param string $order_id
