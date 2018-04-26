@@ -62,7 +62,7 @@ class GetPaymentDetailsTest extends PaymentResourceBaseTestBase
     public function testPath()
     {
         $this->assertEquals(
-            '/Ecomm/v1/payments/test_order_id/serialNumber/test_merchant_serial_number/details',
+            '/Ecomm/v2/payments/test_order_id/details',
             $this->resource->getPath()
         );
     }
