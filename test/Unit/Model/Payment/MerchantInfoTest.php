@@ -75,5 +75,4 @@ class MerchantInfoTest extends ModelTestBase
         $this->assertInstanceOf(MerchantInfo::class, $this->model->setFallBack('http://test.example.com/fallback'));
         $this->assertEquals('http://test.example.com/fallback', $this->model->getFallBack());
     }
-
 }
