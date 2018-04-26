@@ -39,14 +39,7 @@ class PaymentsTest extends IntegrationTestBase
     {
         $this->mockResponse(parent::getResponse([
             'orderId' => 'test_order_id',
-            'merchantSerialNumber' => $this->merchantSerialNumber,
-            'transactionInfo' => [
-                'transactionId' => 'test_transaction_id',
-                'amount' => '1200',
-                'status' => 'test_status',
-                'timeStamp' => '2017-07-31T15:07:37.100Z',
-                'message' => 'test_message',
-            ]
+            'url' => 'test_vipps_url'
         ]));
 
         // Do request.
@@ -58,18 +51,10 @@ class PaymentsTest extends IntegrationTestBase
             'https://www.example.com',
             'https://www.example.com/fallback'
         );
-
+        
         // Assert response.
         $this->assertEquals('test_order_id', $response->getOrderId());
-        $this->assertEquals($this->merchantSerialNumber, $response->getMerchantSerialNumber());
-        $this->assertEquals('test_transaction_id', $response->getTransactionInfo()->getTransactionId());
-        $this->assertEquals(1200, $response->getTransactionInfo()->getAmount());
-        $this->assertEquals('test_status', $response->getTransactionInfo()->getStatus());
-        $this->assertEquals(
-            '2017-07-31T15:07:37',
-            $response->getTransactionInfo()->getTimeStamp()->format('Y-m-d\TH:i:s')
-        );
-        $this->assertEquals('test_message', $response->getTransactionInfo()->getMessage());
+        $this->assertEquals('test_vipps_url', $response->getUrl());
     }
 
     /**

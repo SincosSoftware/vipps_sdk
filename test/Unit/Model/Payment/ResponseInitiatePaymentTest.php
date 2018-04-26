@@ -27,8 +27,7 @@ class ResponseInitiatePaymentTest extends ModelTestBase
         $this->model = $resource->getSerializer()->deserialize(
             json_encode((object) [
                 'orderId' => 'test_order_id',
-                'merchantSerialNumber' => 'test_merchant_serial_number',
-                'transactionInfo' => [],
+                'url' => 'test_vipps_url'
             ]),
             ResponseInitiatePayment::class,
             'json'
@@ -44,18 +43,11 @@ class ResponseInitiatePaymentTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment::getMerchantSerialNumber()
+     * @covers \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment::getUrl()
      */
-    public function testMerchantSerialNumber()
+    public function testUrl()
     {
-        $this->assertEquals('test_merchant_serial_number', $this->model->getMerchantSerialNumber());
+        $this->assertEquals('test_vipps_url', $this->model->getUrl());
     }
 
-    /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment::getTransactionInfo()
-     */
-    public function testTransactionInfo()
-    {
-        $this->assertInstanceOf(TransactionInfo::class, $this->model->getTransactionInfo());
-    }
 }
