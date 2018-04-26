@@ -17,7 +17,7 @@ class GetOrderStatus extends PaymentResourceBase
     /**
      * @var string
      */
-    protected $path = '/Ecomm/v1/payments/{id}/serialNumber/{merchantSerialNumber}/status';
+    protected $path = '/Ecomm/v2/payments/{id}/status';
 
     /**
      * InitiatePayment constructor.

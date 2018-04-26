@@ -17,7 +17,7 @@ class GetPaymentDetails extends PaymentResourceBase
     /**
      * @var string
      */
-    protected $path = '/Ecomm/v1/payments/{id}/serialNumber/{merchantSerialNumber}/details';
+    protected $path = '/Ecomm/v2/payments/{id}/details';
 
     /**
      * InitiatePayment constructor.
