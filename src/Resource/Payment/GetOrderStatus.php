@@ -1,28 +1,28 @@
 <?php
 
-namespace zaporylie\Vipps\Resource\Payment;
+namespace SincosSoftware\Vipps\Resource\Payment;
 
-use zaporylie\Vipps\Model\Payment\ResponseGetOrderStatus;
-use zaporylie\Vipps\Resource\HttpMethod;
-use zaporylie\Vipps\VippsInterface;
+use SincosSoftware\Vipps\Model\Payment\ResponseGetOrderStatus;
+use SincosSoftware\Vipps\Resource\HttpMethod;
+use SincosSoftware\Vipps\VippsInterface;
 
 class GetOrderStatus extends PaymentResourceBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\HttpMethod
+     * @var \SincosSoftware\Vipps\Resource\HttpMethod
      */
     protected $method = HttpMethod::GET;
 
     /**
      * @var string
      */
-    protected $path = '/Ecomm/v1/payments/{id}/serialNumber/{merchantSerialNumber}/status';
+    protected $path = '/Ecomm/v2/payments/{id}/status';
 
     /**
      * InitiatePayment constructor.
      *
-     * @param \zaporylie\Vipps\VippsInterface $vipps
+     * @param \SincosSoftware\Vipps\VippsInterface $vipps
      * @param string $subscription_key
      * @param string $merchant_serial_number
      * @param string $order_id
@@ -35,13 +35,13 @@ class GetOrderStatus extends PaymentResourceBase
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\ResponseGetOrderStatus
+     * @return \SincosSoftware\Vipps\Model\Payment\ResponseGetOrderStatus
      */
     public function call()
     {
         $response = $this->makeCall();
         $body = $response->getBody()->getContents();
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseGetOrderStatus $responseObject */
+        /** @var \SincosSoftware\Vipps\Model\Payment\ResponseGetOrderStatus $responseObject */
         $responseObject = $this
             ->getSerializer()
             ->deserialize(

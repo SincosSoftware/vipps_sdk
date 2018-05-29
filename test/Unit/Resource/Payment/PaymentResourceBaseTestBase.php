@@ -1,20 +1,20 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Resource\Payment;
 
-use zaporylie\Vipps\Tests\Unit\Resource\ResourceTestBase;
+use SincosSoftware\Vipps\Tests\Unit\Resource\ResourceTestBase;
 
 class PaymentResourceBaseTestBase extends ResourceTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\ResourceInterface
+     * @var \SincosSoftware\Vipps\Resource\ResourceInterface
      */
     protected $resource;
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\PaymentResourceBase::__construct
-     * @covers \zaporylie\Vipps\Resource\Payment\PaymentResourceBase::getHeaders()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\PaymentResourceBase::__construct
+     * @covers \SincosSoftware\Vipps\Resource\Payment\PaymentResourceBase::getHeaders()
      */
     public function testHeaders()
     {

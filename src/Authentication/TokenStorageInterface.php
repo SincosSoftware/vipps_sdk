@@ -1,8 +1,8 @@
 <?php
 
-namespace zaporylie\Vipps\Authentication;
+namespace SincosSoftware\Vipps\Authentication;
 
-use zaporylie\Vipps\Model\Authorization\ResponseGetToken;
+use SincosSoftware\Vipps\Model\Authorization\ResponseGetToken;
 
 /**
  * Interface TokenStorageInterface
@@ -13,13 +13,13 @@ interface TokenStorageInterface
 {
 
     /**
-     * @return \zaporylie\Vipps\Model\Authorization\ResponseGetToken
-     * @throws \zaporylie\Vipps\Exceptions\Authentication\InvalidArgumentException
+     * @return \SincosSoftware\Vipps\Model\Authorization\ResponseGetToken
+     * @throws \SincosSoftware\Vipps\Exceptions\Authentication\InvalidArgumentException
      */
     public function get();
 
     /**
-     * @param \zaporylie\Vipps\Model\Authorization\ResponseGetToken $token
+     * @param \SincosSoftware\Vipps\Model\Authorization\ResponseGetToken $token
      *
      * @return self
      */

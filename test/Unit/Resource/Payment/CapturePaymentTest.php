@@ -1,19 +1,19 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Resource\Payment;
 
 use GuzzleHttp\Psr7\Response;
 use function GuzzleHttp\Psr7\stream_for;
-use zaporylie\Vipps\Model\Payment\RequestCapturePayment;
-use zaporylie\Vipps\Model\Payment\ResponseCapturePayment;
-use zaporylie\Vipps\Resource\Payment\CapturePayment;
-use zaporylie\Vipps\Resource\HttpMethod;
+use SincosSoftware\Vipps\Model\Payment\RequestCapturePayment;
+use SincosSoftware\Vipps\Model\Payment\ResponseCapturePayment;
+use SincosSoftware\Vipps\Resource\Payment\CapturePayment;
+use SincosSoftware\Vipps\Resource\HttpMethod;
 
 class CapturePaymentTest extends PaymentResourceBaseTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\Payment\CapturePayment
+     * @var \SincosSoftware\Vipps\Resource\Payment\CapturePayment
      */
     protected $resource;
 
@@ -36,8 +36,8 @@ class CapturePaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\CapturePayment::getBody()
-     * @covers \zaporylie\Vipps\Resource\Payment\CapturePayment::__construct()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\CapturePayment::getBody()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\CapturePayment::__construct()
      */
     public function testBody()
     {
@@ -47,7 +47,7 @@ class CapturePaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\CapturePayment::getMethod()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\CapturePayment::getMethod()
      */
     public function testMethod()
     {
@@ -55,7 +55,7 @@ class CapturePaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\CapturePayment::getPath()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\CapturePayment::getPath()
      */
     public function testPath()
     {
@@ -63,7 +63,7 @@ class CapturePaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\CapturePayment::call()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\CapturePayment::call()
      */
     public function testCall()
     {

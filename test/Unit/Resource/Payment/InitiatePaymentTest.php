@@ -1,19 +1,19 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Resource\Payment;
 
 use GuzzleHttp\Psr7\Response;
 use function GuzzleHttp\Psr7\stream_for;
-use zaporylie\Vipps\Model\Payment\RequestInitiatePayment;
-use zaporylie\Vipps\Model\Payment\ResponseInitiatePayment;
-use zaporylie\Vipps\Resource\Payment\InitiatePayment;
-use zaporylie\Vipps\Resource\HttpMethod;
+use SincosSoftware\Vipps\Model\Payment\RequestInitiatePayment;
+use SincosSoftware\Vipps\Model\Payment\ResponseInitiatePayment;
+use SincosSoftware\Vipps\Resource\Payment\InitiatePayment;
+use SincosSoftware\Vipps\Resource\HttpMethod;
 
 class InitiatePaymentTest extends PaymentResourceBaseTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\Payment\InitiatePayment
+     * @var \SincosSoftware\Vipps\Resource\Payment\InitiatePayment
      */
     protected $resource;
 
@@ -36,8 +36,8 @@ class InitiatePaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\InitiatePayment::getBody()
-     * @covers \zaporylie\Vipps\Resource\Payment\InitiatePayment::__construct()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\InitiatePayment::getBody()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\InitiatePayment::__construct()
      */
     public function testBody()
     {
@@ -47,7 +47,7 @@ class InitiatePaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\InitiatePayment::getMethod()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\InitiatePayment::getMethod()
      */
     public function testMethod()
     {
@@ -55,15 +55,15 @@ class InitiatePaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\InitiatePayment::getPath()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\InitiatePayment::getPath()
      */
     public function testPath()
     {
-        $this->assertEquals('/Ecomm/v1/payments', $this->resource->getPath());
+        $this->assertEquals('/Ecomm/v2/payments', $this->resource->getPath());
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\InitiatePayment::call()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\InitiatePayment::call()
      */
     public function testCall()
     {

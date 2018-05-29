@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Exceptions\Client;
+namespace SincosSoftware\Vipps\Exceptions\Client;
 
 class InvalidArgumentException extends \InvalidArgumentException
 {

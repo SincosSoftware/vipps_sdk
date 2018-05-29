@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Model\Payment;
+namespace SincosSoftware\Vipps\Model\Payment;
 
 use JMS\Serializer\Annotation as Serializer;
 
@@ -18,17 +18,12 @@ class ResponseInitiatePayment
      */
     protected $orderId;
 
+
     /**
      * @var string
      * @Serializer\Type("string")
      */
-    protected $merchantSerialNumber;
-
-    /**
-     * @var \zaporylie\Vipps\Model\Payment\TransactionInfo
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\TransactionInfo")
-     */
-    protected $transactionInfo;
+    protected $url;
 
     /**
      * Gets orderId value.
@@ -41,22 +36,13 @@ class ResponseInitiatePayment
     }
 
     /**
-     * Gets merchantSerialNumber value.
+     * Gets url value.
      *
      * @return string
      */
-    public function getMerchantSerialNumber()
+    public function getUrl()
     {
-        return $this->merchantSerialNumber;
+        return $this->url;
     }
 
-    /**
-     * Gets transactionInfo value.
-     *
-     * @return \zaporylie\Vipps\Model\Payment\TransactionInfo
-     */
-    public function getTransactionInfo()
-    {
-        return $this->transactionInfo;
-    }
 }

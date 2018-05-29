@@ -1,17 +1,17 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails;
-use zaporylie\Vipps\Model\Payment\TransactionSummary;
-use zaporylie\Vipps\Resource\Payment\GetPaymentDetails;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use SincosSoftware\Vipps\Model\Payment\ResponseGetPaymentDetails;
+use SincosSoftware\Vipps\Model\Payment\TransactionSummary;
+use SincosSoftware\Vipps\Resource\Payment\GetPaymentDetails;
+use SincosSoftware\Vipps\Tests\Unit\Model\ModelTestBase;
 
 class ResponseGetPaymentDetailsTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails
+     * @var \SincosSoftware\Vipps\Model\Payment\ResponseGetPaymentDetails
      */
     protected $model;
 
@@ -34,7 +34,7 @@ class ResponseGetPaymentDetailsTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails::getOrderId()
+     * @covers \SincosSoftware\Vipps\Model\Payment\ResponseGetPaymentDetails::getOrderId()
      */
     public function testOrderId()
     {
@@ -42,7 +42,7 @@ class ResponseGetPaymentDetailsTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails::getTransactionSummary()
+     * @covers \SincosSoftware\Vipps\Model\Payment\ResponseGetPaymentDetails::getTransactionSummary()
      */
     public function testTransactionSummary()
     {
@@ -50,7 +50,7 @@ class ResponseGetPaymentDetailsTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails::getTransactionLogHistory()
+     * @covers \SincosSoftware\Vipps\Model\Payment\ResponseGetPaymentDetails::getTransactionLogHistory()
      */
     public function testTransactionLogHistory()
     {

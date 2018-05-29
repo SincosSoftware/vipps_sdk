@@ -1,15 +1,15 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\Transaction;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use SincosSoftware\Vipps\Model\Payment\Transaction;
+use SincosSoftware\Vipps\Tests\Unit\Model\ModelTestBase;
 
 class TransactionTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\Transaction
+     * @var \SincosSoftware\Vipps\Model\Payment\Transaction
      */
     protected $model;
 
@@ -23,8 +23,8 @@ class TransactionTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\Transaction::setOrderId()
-     * @covers \zaporylie\Vipps\Model\Payment\Transaction::getOrderId()
+     * @covers \SincosSoftware\Vipps\Model\Payment\Transaction::setOrderId()
+     * @covers \SincosSoftware\Vipps\Model\Payment\Transaction::getOrderId()
      */
     public function testOrderId()
     {
@@ -34,8 +34,8 @@ class TransactionTest extends ModelTestBase
 
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\Transaction::getTransactionText()
-     * @covers \zaporylie\Vipps\Model\Payment\Transaction::setTransactionText()
+     * @covers \SincosSoftware\Vipps\Model\Payment\Transaction::getTransactionText()
+     * @covers \SincosSoftware\Vipps\Model\Payment\Transaction::setTransactionText()
      */
     public function testTransactionText()
     {
@@ -44,8 +44,8 @@ class TransactionTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\Transaction::getTimeStamp()
-     * @covers \zaporylie\Vipps\Model\Payment\Transaction::setTimeStamp()
+     * @covers \SincosSoftware\Vipps\Model\Payment\Transaction::getTimeStamp()
+     * @covers \SincosSoftware\Vipps\Model\Payment\Transaction::setTimeStamp()
      */
     public function testTimeStamp()
     {
@@ -55,8 +55,8 @@ class TransactionTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\Transaction::getAmount()
-     * @covers \zaporylie\Vipps\Model\Payment\Transaction::setAmount()
+     * @covers \SincosSoftware\Vipps\Model\Payment\Transaction::getAmount()
+     * @covers \SincosSoftware\Vipps\Model\Payment\Transaction::setAmount()
      */
     public function testAmount()
     {
@@ -65,8 +65,8 @@ class TransactionTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\Transaction::getRefOrderId()
-     * @covers \zaporylie\Vipps\Model\Payment\Transaction::setRefOrderId()
+     * @covers \SincosSoftware\Vipps\Model\Payment\Transaction::getRefOrderId()
+     * @covers \SincosSoftware\Vipps\Model\Payment\Transaction::setRefOrderId()
      */
     public function testRefOrderId()
     {

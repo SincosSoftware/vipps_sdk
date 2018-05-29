@@ -1,5 +1,5 @@
 {
-    "name": "zaporylie/vipps",
+    "name": "SincosSoftware/vipps",
     "description": "Vipps by DNB PHP SDK",
     "type": "library",
     "keywords": ["payment"],
@@ -41,9 +41,9 @@
         "test-unit": "./vendor/bin/phpunit"
     },
     "autoload": {
-        "psr-4": { "zaporylie\\Vipps\\": "src/" }
+        "psr-4": { "SincosSoftware\\Vipps\\": "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "zaporylie\\Vipps\\Tests\\": "test/" }
+        "psr-4": { "SincosSoftware\\Vipps\\Tests\\": "test/" }
     }
 }

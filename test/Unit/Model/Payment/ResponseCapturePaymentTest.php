@@ -1,19 +1,19 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\RequestCapturePayment;
-use zaporylie\Vipps\Model\Payment\ResponseCapturePayment;
-use zaporylie\Vipps\Model\Payment\TransactionInfo;
-use zaporylie\Vipps\Model\Payment\TransactionSummary;
-use zaporylie\Vipps\Resource\Payment\CapturePayment;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use SincosSoftware\Vipps\Model\Payment\RequestCapturePayment;
+use SincosSoftware\Vipps\Model\Payment\ResponseCapturePayment;
+use SincosSoftware\Vipps\Model\Payment\TransactionInfo;
+use SincosSoftware\Vipps\Model\Payment\TransactionSummary;
+use SincosSoftware\Vipps\Resource\Payment\CapturePayment;
+use SincosSoftware\Vipps\Tests\Unit\Model\ModelTestBase;
 
 class ResponseCapturePaymentTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\ResponseCapturePayment
+     * @var \SincosSoftware\Vipps\Model\Payment\ResponseCapturePayment
      */
     protected $model;
 
@@ -36,7 +36,7 @@ class ResponseCapturePaymentTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseCapturePayment::getOrderId()
+     * @covers \SincosSoftware\Vipps\Model\Payment\ResponseCapturePayment::getOrderId()
      */
     public function testOrderId()
     {
@@ -44,7 +44,7 @@ class ResponseCapturePaymentTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseCapturePayment::getTransactionInfo()
+     * @covers \SincosSoftware\Vipps\Model\Payment\ResponseCapturePayment::getTransactionInfo()
      */
     public function testTransactionInfo()
     {
@@ -52,7 +52,7 @@ class ResponseCapturePaymentTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseCapturePayment::getTransactionSummary()
+     * @covers \SincosSoftware\Vipps\Model\Payment\ResponseCapturePayment::getTransactionSummary()
      */
     public function testTransactionSummary()
     {

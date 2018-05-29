@@ -1,15 +1,15 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\TransactionInfo;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use SincosSoftware\Vipps\Model\Payment\TransactionInfo;
+use SincosSoftware\Vipps\Tests\Unit\Model\ModelTestBase;
 
 class TransactionInfoTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\TransactionInfo
+     * @var \SincosSoftware\Vipps\Model\Payment\TransactionInfo
      */
     protected $model;
 
@@ -23,8 +23,8 @@ class TransactionInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\TransactionInfo::getAmount()
-     * @covers \zaporylie\Vipps\Model\Payment\TransactionInfo::setAmount()
+     * @covers \SincosSoftware\Vipps\Model\Payment\TransactionInfo::getAmount()
+     * @covers \SincosSoftware\Vipps\Model\Payment\TransactionInfo::setAmount()
      */
     public function testAmount()
     {
@@ -34,8 +34,8 @@ class TransactionInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\TransactionInfo::getTimeStamp()
-     * @covers \zaporylie\Vipps\Model\Payment\TransactionInfo::setTimeStamp()
+     * @covers \SincosSoftware\Vipps\Model\Payment\TransactionInfo::getTimeStamp()
+     * @covers \SincosSoftware\Vipps\Model\Payment\TransactionInfo::setTimeStamp()
      */
     public function testTimeStamp()
     {
@@ -45,8 +45,8 @@ class TransactionInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\TransactionInfo::getTransactionId()
-     * @covers \zaporylie\Vipps\Model\Payment\TransactionInfo::setTransactionId()
+     * @covers \SincosSoftware\Vipps\Model\Payment\TransactionInfo::getTransactionId()
+     * @covers \SincosSoftware\Vipps\Model\Payment\TransactionInfo::setTransactionId()
      */
     public function testTransactionId()
     {
@@ -56,8 +56,8 @@ class TransactionInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\TransactionInfo::getStatus()
-     * @covers \zaporylie\Vipps\Model\Payment\TransactionInfo::setStatus()
+     * @covers \SincosSoftware\Vipps\Model\Payment\TransactionInfo::getStatus()
+     * @covers \SincosSoftware\Vipps\Model\Payment\TransactionInfo::setStatus()
      */
     public function testStatus()
     {
@@ -67,8 +67,8 @@ class TransactionInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\TransactionInfo::getMessage()
-     * @covers \zaporylie\Vipps\Model\Payment\TransactionInfo::setMessage()
+     * @covers \SincosSoftware\Vipps\Model\Payment\TransactionInfo::getMessage()
+     * @covers \SincosSoftware\Vipps\Model\Payment\TransactionInfo::setMessage()
      */
     public function testMessage()
     {

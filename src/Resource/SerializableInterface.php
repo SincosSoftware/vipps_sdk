@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Resource;
+namespace SincosSoftware\Vipps\Resource;
 
 /**
  * Class ResourceBase

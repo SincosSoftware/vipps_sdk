@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Model\Payment;
+namespace SincosSoftware\Vipps\Model\Payment;
 
 use JMS\Serializer\Annotation as Serializer;
 

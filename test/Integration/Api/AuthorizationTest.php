@@ -1,9 +1,9 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Integration\Api;
+namespace SincosSoftware\Vipps\Tests\Integration\Api;
 
-use zaporylie\Vipps\Exceptions\VippsException;
-use zaporylie\Vipps\Tests\Integration\IntegrationTestBase;
+use SincosSoftware\Vipps\Exceptions\VippsException;
+use SincosSoftware\Vipps\Tests\Integration\IntegrationTestBase;
 
 /**
  * Class AuthorizationTest
@@ -14,8 +14,8 @@ class AuthorizationTest extends IntegrationTestBase
 {
 
     /**
-     * @covers \zaporylie\Vipps\Api\Authorization::getToken()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::makeCall()
+     * @covers \SincosSoftware\Vipps\Api\Authorization::getToken()
+     * @covers \SincosSoftware\Vipps\Resource\ResourceBase::makeCall()
      */
     public function testValidGetToken()
     {
@@ -47,8 +47,8 @@ class AuthorizationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Authorization::getToken()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::makeCall()
+     * @covers \SincosSoftware\Vipps\Api\Authorization::getToken()
+     * @covers \SincosSoftware\Vipps\Resource\ResourceBase::makeCall()
      */
     public function testInvalidGetToken()
     {
@@ -60,8 +60,8 @@ class AuthorizationTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Authorization::getToken()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::makeCall()
+     * @covers \SincosSoftware\Vipps\Api\Authorization::getToken()
+     * @covers \SincosSoftware\Vipps\Resource\ResourceBase::makeCall()
      */
     public function testServerError()
     {

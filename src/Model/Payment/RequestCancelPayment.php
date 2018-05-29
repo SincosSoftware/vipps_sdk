@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Model\Payment;
+namespace SincosSoftware\Vipps\Model\Payment;
 
 use JMS\Serializer\Annotation as Serializer;
 
@@ -12,21 +12,21 @@ use JMS\Serializer\Annotation as Serializer;
 class RequestCancelPayment
 {
     /**
-     * @var \zaporylie\Vipps\Model\Payment\MerchantInfo
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\MerchantInfo")
+     * @var \SincosSoftware\Vipps\Model\Payment\MerchantInfo
+     * @Serializer\Type("SincosSoftware\Vipps\Model\Payment\MerchantInfo")
      */
     protected $merchantInfo;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\Transaction
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\Transaction")
+     * @var \SincosSoftware\Vipps\Model\Payment\Transaction
+     * @Serializer\Type("SincosSoftware\Vipps\Model\Payment\Transaction")
      */
     protected $transaction;
 
     /**
      * Gets merchantInfo value.
      *
-     * @return \zaporylie\Vipps\Model\Payment\MerchantInfo
+     * @return \SincosSoftware\Vipps\Model\Payment\MerchantInfo
      */
     public function getMerchantInfo()
     {
@@ -36,7 +36,7 @@ class RequestCancelPayment
     /**
      * Sets merchantInfo variable.
      *
-     * @param \zaporylie\Vipps\Model\Payment\MerchantInfo $merchantInfo
+     * @param \SincosSoftware\Vipps\Model\Payment\MerchantInfo $merchantInfo
      *
      * @return $this
      */
@@ -49,7 +49,7 @@ class RequestCancelPayment
     /**
      * Gets transaction value.
      *
-     * @return \zaporylie\Vipps\Model\Payment\Transaction
+     * @return \SincosSoftware\Vipps\Model\Payment\Transaction
      */
     public function getTransaction()
     {
@@ -59,7 +59,7 @@ class RequestCancelPayment
     /**
      * Sets transaction variable.
      *
-     * @param \zaporylie\Vipps\Model\Payment\Transaction $transaction
+     * @param \SincosSoftware\Vipps\Model\Payment\Transaction $transaction
      *
      * @return $this
      */

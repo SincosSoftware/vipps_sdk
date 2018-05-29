@@ -1,11 +1,11 @@
 <?php
 
-namespace zaporylie\Vipps\Resource\Payment;
+namespace SincosSoftware\Vipps\Resource\Payment;
 
-use zaporylie\Vipps\Model\Payment\RequestCancelPayment;
-use zaporylie\Vipps\Model\Payment\ResponseCancelPayment;
-use zaporylie\Vipps\Resource\HttpMethod;
-use zaporylie\Vipps\VippsInterface;
+use SincosSoftware\Vipps\Model\Payment\RequestCancelPayment;
+use SincosSoftware\Vipps\Model\Payment\ResponseCancelPayment;
+use SincosSoftware\Vipps\Resource\HttpMethod;
+use SincosSoftware\Vipps\VippsInterface;
 
 /**
  * Class CancelPayment
@@ -16,22 +16,22 @@ class CancelPayment extends PaymentResourceBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\HttpMethod
+     * @var \SincosSoftware\Vipps\Resource\HttpMethod
      */
     protected $method = HttpMethod::PUT;
 
     /**
      * @var string
      */
-    protected $path = '/Ecomm/v1/payments/{id}/cancel';
+    protected $path = '/ecomm/v2/payments/{id}/cancel';
 
     /**
      * InitiatePayment constructor.
      *
-     * @param \zaporylie\Vipps\VippsInterface $vipps
+     * @param \SincosSoftware\Vipps\VippsInterface $vipps
      * @param string $subscription_key
      * @param string $order_id
-     * @param \zaporylie\Vipps\Model\Payment\RequestCancelPayment $requestObject
+     * @param \SincosSoftware\Vipps\Model\Payment\RequestCancelPayment $requestObject
      */
     public function __construct(
         VippsInterface $vipps,
@@ -50,13 +50,13 @@ class CancelPayment extends PaymentResourceBase
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\ResponseCancelPayment
+     * @return \SincosSoftware\Vipps\Model\Payment\ResponseCancelPayment
      */
     public function call()
     {
         $response = $this->makeCall();
         $body = $response->getBody()->getContents();
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseCancelPayment $responseObject */
+        /** @var \SincosSoftware\Vipps\Model\Payment\ResponseCancelPayment $responseObject */
         $responseObject = $this
             ->getSerializer()
             ->deserialize(

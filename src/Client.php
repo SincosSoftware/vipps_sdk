@@ -1,14 +1,14 @@
 <?php
 
-namespace zaporylie\Vipps;
+namespace SincosSoftware\Vipps;
 
 use Http\Client\HttpAsyncClient;
 use Http\Client\HttpClient;
 use Http\Discovery\HttpClientDiscovery;
 use Http\Discovery\MessageFactoryDiscovery;
-use zaporylie\Vipps\Authentication\TokenMemoryCacheStorage;
-use zaporylie\Vipps\Authentication\TokenStorageInterface;
-use zaporylie\Vipps\Exceptions\Client\InvalidArgumentException;
+use SincosSoftware\Vipps\Authentication\TokenMemoryCacheStorage;
+use SincosSoftware\Vipps\Authentication\TokenStorageInterface;
+use SincosSoftware\Vipps\Exceptions\Client\InvalidArgumentException;
 
 class Client implements ClientInterface
 {
@@ -19,7 +19,7 @@ class Client implements ClientInterface
     protected $httpClient;
 
     /**
-     * @var \zaporylie\Vipps\EndpointInterface
+     * @var \SincosSoftware\Vipps\EndpointInterface
      */
     protected $endpoint;
 
@@ -39,7 +39,7 @@ class Client implements ClientInterface
     protected $tokenType;
 
     /**
-     * @var \zaporylie\Vipps\Authentication\TokenStorageInterface
+     * @var \SincosSoftware\Vipps\Authentication\TokenStorageInterface
      */
     protected $tokenStorage;
 
@@ -97,7 +97,7 @@ class Client implements ClientInterface
     /**
      * Gets tokenStorage value.
      *
-     * @return \zaporylie\Vipps\Authentication\TokenStorageInterface
+     * @return \SincosSoftware\Vipps\Authentication\TokenStorageInterface
      */
     public function getTokenStorage()
     {
@@ -107,7 +107,7 @@ class Client implements ClientInterface
     /**
      * Sets tokenStorage variable.
      *
-     * @param \zaporylie\Vipps\Authentication\TokenStorageInterface $tokenStorage
+     * @param \SincosSoftware\Vipps\Authentication\TokenStorageInterface $tokenStorage
      *
      * @return $this
      */
@@ -146,7 +146,7 @@ class Client implements ClientInterface
     /**
      * Gets connection value.
      *
-     * @return \zaporylie\Vipps\EndpointInterface
+     * @return \SincosSoftware\Vipps\EndpointInterface
      */
     public function getEndpoint()
     {
@@ -156,7 +156,7 @@ class Client implements ClientInterface
     /**
      * Sets connection variable.
      *
-     * @param \zaporylie\Vipps\EndpointInterface $endpoint
+     * @param \SincosSoftware\Vipps\EndpointInterface $endpoint
      *
      * @return $this
      */

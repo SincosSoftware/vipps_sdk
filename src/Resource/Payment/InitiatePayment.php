@@ -1,11 +1,11 @@
 <?php
 
-namespace zaporylie\Vipps\Resource\Payment;
+namespace SincosSoftware\Vipps\Resource\Payment;
 
-use zaporylie\Vipps\Model\Payment\RequestInitiatePayment;
-use zaporylie\Vipps\Model\Payment\ResponseInitiatePayment;
-use zaporylie\Vipps\Resource\HttpMethod;
-use zaporylie\Vipps\VippsInterface;
+use SincosSoftware\Vipps\Model\Payment\RequestInitiatePayment;
+use SincosSoftware\Vipps\Model\Payment\ResponseInitiatePayment;
+use SincosSoftware\Vipps\Resource\HttpMethod;
+use SincosSoftware\Vipps\VippsInterface;
 
 /**
  * Class InitiatePayment
@@ -16,21 +16,21 @@ class InitiatePayment extends PaymentResourceBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\HttpMethod
+     * @var \SincosSoftware\Vipps\Resource\HttpMethod
      */
     protected $method = HttpMethod::POST;
 
     /**
      * @var string
      */
-    protected $path = '/Ecomm/v1/payments';
+    protected $path = '/Ecomm/v2/payments';
 
     /**
      * InitiatePayment constructor.
      *
-     * @param \zaporylie\Vipps\VippsInterface $vipps
+     * @param \SincosSoftware\Vipps\VippsInterface $vipps
      * @param string $subscription_key
-     * @param \zaporylie\Vipps\Model\Payment\RequestInitiatePayment $requestObject
+     * @param \SincosSoftware\Vipps\Model\Payment\RequestInitiatePayment $requestObject
      */
     public function __construct(VippsInterface $vipps, $subscription_key, RequestInitiatePayment $requestObject)
     {
@@ -44,13 +44,14 @@ class InitiatePayment extends PaymentResourceBase
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment
+     * @return \SincosSoftware\Vipps\Model\Payment\ResponseInitiatePayment
      */
     public function call()
     {
         $response = $this->makeCall();
         $body = $response->getBody()->getContents();
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment $responseObject */
+
+        /** @var \SincosSoftware\Vipps\Model\Payment\ResponseInitiatePayment $responseObject */
         $responseObject = $this
             ->getSerializer()
             ->deserialize(

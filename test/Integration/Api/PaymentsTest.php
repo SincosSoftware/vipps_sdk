@@ -1,9 +1,9 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Integration\Api;
+namespace SincosSoftware\Vipps\Tests\Integration\Api;
 
-use zaporylie\Vipps\Exceptions\VippsException;
-use zaporylie\Vipps\Tests\Integration\IntegrationTestBase;
+use SincosSoftware\Vipps\Exceptions\VippsException;
+use SincosSoftware\Vipps\Tests\Integration\IntegrationTestBase;
 
 /**
  * Class PaymentsTest
@@ -19,7 +19,7 @@ class PaymentsTest extends IntegrationTestBase
     protected $merchantSerialNumber = 'test_merchant_serial_number';
 
     /**
-     * @var \zaporylie\Vipps\Api\PaymentInterface
+     * @var \SincosSoftware\Vipps\Api\PaymentInterface
      */
     protected $api;
 
@@ -33,20 +33,13 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::initiatePayment()
+     * @covers \SincosSoftware\Vipps\Api\Payment::initiatePayment()
      */
     public function testValidInitiatePayment()
     {
         $this->mockResponse(parent::getResponse([
             'orderId' => 'test_order_id',
-            'merchantSerialNumber' => $this->merchantSerialNumber,
-            'transactionInfo' => [
-                'transactionId' => 'test_transaction_id',
-                'amount' => '1200',
-                'status' => 'test_status',
-                'timeStamp' => '2017-07-31T15:07:37.100Z',
-                'message' => 'test_message',
-            ]
+            'url' => 'test_vipps_url'
         ]));
 
         // Do request.
@@ -55,34 +48,34 @@ class PaymentsTest extends IntegrationTestBase
             '98765432',
             1200,
             'test_text',
-            'https://www.example.com'
+            'https://www.example.com',
+            'https://www.example.com/fallback'
         );
-
+        
         // Assert response.
         $this->assertEquals('test_order_id', $response->getOrderId());
-        $this->assertEquals($this->merchantSerialNumber, $response->getMerchantSerialNumber());
-        $this->assertEquals('test_transaction_id', $response->getTransactionInfo()->getTransactionId());
-        $this->assertEquals(1200, $response->getTransactionInfo()->getAmount());
-        $this->assertEquals('test_status', $response->getTransactionInfo()->getStatus());
-        $this->assertEquals(
-            '2017-07-31T15:07:37',
-            $response->getTransactionInfo()->getTimeStamp()->format('Y-m-d\TH:i:s')
-        );
-        $this->assertEquals('test_message', $response->getTransactionInfo()->getMessage());
+        $this->assertEquals('test_vipps_url', $response->getUrl());
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::initiatePayment()
+     * @covers \SincosSoftware\Vipps\Api\Payment::initiatePayment()
      */
     public function testInvalidInitiatePayment()
     {
         $this->mockResponse(parent::getErrorResponse());
         $this->expectException(VippsException::class);
-        $this->api->initiatePayment('test_client_secret', '98765432', 1200, 'test_text', 'http://www.example.com');
+        $this->api->initiatePayment(
+            'test_client_secret',
+            '98765432',
+            1200,
+            'test_text',
+            'http://www.example.com',
+            'http://www.example.com/fallback'
+        );
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::capturePayment()
+     * @covers \SincosSoftware\Vipps\Api\Payment::capturePayment()
      */
     public function testValidCapturePayment()
     {
@@ -128,7 +121,7 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::cancelPayment()
+     * @covers \SincosSoftware\Vipps\Api\Payment::cancelPayment()
      */
     public function testValidCancelPayment()
     {
@@ -174,7 +167,7 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::refundPayment()
+     * @covers \SincosSoftware\Vipps\Api\Payment::refundPayment()
      */
     public function testValidRefundPayment()
     {
@@ -221,7 +214,7 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::getOrderStatus()
+     * @covers \SincosSoftware\Vipps\Api\Payment::getOrderStatus()
      */
     public function testValidGetOrderStatus()
     {
@@ -256,7 +249,7 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::getPaymentDetails()
+     * @covers \SincosSoftware\Vipps\Api\Payment::getPaymentDetails()
      */
     public function testValidGetPaymentDetails()
     {

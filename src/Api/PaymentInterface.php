@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Api;
+namespace SincosSoftware\Vipps\Api;
 
 /**
  * Interface PaymentInterface
@@ -14,7 +14,7 @@ interface PaymentInterface
      * @param string $order_id
      * @param string $text
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseCancelPayment
+     * @return \SincosSoftware\Vipps\Model\Payment\ResponseCancelPayment
      */
     public function cancelPayment($order_id, $text);
 
@@ -23,21 +23,21 @@ interface PaymentInterface
      * @param string $text
      * @param int $amount
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseCapturePayment
+     * @return \SincosSoftware\Vipps\Model\Payment\ResponseCapturePayment
      */
     public function capturePayment($order_id, $text, $amount = 0);
 
     /**
      * @param string $order_id
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseGetOrderStatus
+     * @return \SincosSoftware\Vipps\Model\Payment\ResponseGetOrderStatus
      */
     public function getOrderStatus($order_id);
 
     /**
      * @param string $order_id
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails
+     * @return \SincosSoftware\Vipps\Model\Payment\ResponseGetPaymentDetails
      */
     public function getPaymentDetails($order_id);
 
@@ -47,18 +47,20 @@ interface PaymentInterface
      * @param int $amount
      * @param string $text
      * @param string $callback
+     * @oaram string $fallback
      * @param null $refOrderID
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment
+     * @return \SincosSoftware\Vipps\Model\Payment\ResponseInitiatePayment
      */
-    public function initiatePayment($order_id, $mobile_number, $amount, $text, $callback, $refOrderID = null);
+    public function initiatePayment($order_id, $mobile_number, $amount, $text, $callback, $fallback, $refOrderID = null
+    );
 
     /**
      * @param string $order_id
      * @param string $text
      * @param int $amount
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseRefundPayment
+     * @return \SincosSoftware\Vipps\Model\Payment\ResponseRefundPayment
      */
     public function refundPayment($order_id, $text, $amount = 0);
 }
