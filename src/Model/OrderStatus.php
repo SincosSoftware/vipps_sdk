@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Model;
+namespace SincosSoftware\Vipps\Model;
 
 use Eloquent\Enumeration\AbstractEnumeration;
 

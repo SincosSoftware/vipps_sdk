@@ -6,10 +6,10 @@
  * Vipps client handles all requests, has built in factories for all resources.
  */
 
-namespace zaporylie\Vipps;
+namespace SincosSoftware\Vipps;
 
-use zaporylie\Vipps\Api\Authorization;
-use zaporylie\Vipps\Api\Payment;
+use SincosSoftware\Vipps\Api\Authorization;
+use SincosSoftware\Vipps\Api\Payment;
 
 /**
  * Class Vipps
@@ -19,14 +19,14 @@ class Vipps implements VippsInterface
 {
 
     /**
-     * @var \zaporylie\Vipps\ClientInterface
+     * @var \SincosSoftware\Vipps\ClientInterface
      */
     protected $client;
 
     /**
      * Vipps constructor.
      *
-     * @param \zaporylie\Vipps\ClientInterface $client
+     * @param \SincosSoftware\Vipps\ClientInterface $client
      */
     public function __construct(ClientInterface $client)
     {
@@ -45,7 +45,7 @@ class Vipps implements VippsInterface
      * @param string $subscription_key
      * @param string $merchant_serial_number
      *
-     * @return \zaporylie\Vipps\Api\Payment
+     * @return \SincosSoftware\Vipps\Api\Payment
      */
     public function payment($subscription_key, $merchant_serial_number)
     {
@@ -55,7 +55,7 @@ class Vipps implements VippsInterface
     /**
      * @param string $subscription_key
      *
-     * @return \zaporylie\Vipps\Api\Authorization
+     * @return \SincosSoftware\Vipps\Api\Authorization
      */
     public function authorization($subscription_key)
     {

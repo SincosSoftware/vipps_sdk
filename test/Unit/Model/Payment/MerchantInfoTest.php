@@ -1,15 +1,15 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\MerchantInfo;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use SincosSoftware\Vipps\Model\Payment\MerchantInfo;
+use SincosSoftware\Vipps\Tests\Unit\Model\ModelTestBase;
 
 class MerchantInfoTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\MerchantInfo
+     * @var \SincosSoftware\Vipps\Model\Payment\MerchantInfo
      */
     protected $model;
 
@@ -26,7 +26,7 @@ class MerchantInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\MerchantInfo::getMerchantSerialNumber()
+     * @covers \SincosSoftware\Vipps\Model\Payment\MerchantInfo::getMerchantSerialNumber()
      */
     public function testGetMerchantSerialNumber()
     {
@@ -34,7 +34,7 @@ class MerchantInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\MerchantInfo::setMerchantSerialNumber()
+     * @covers \SincosSoftware\Vipps\Model\Payment\MerchantInfo::setMerchantSerialNumber()
      */
     public function testSetMobileNumber()
     {
@@ -43,7 +43,7 @@ class MerchantInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\MerchantInfo::getCallBack()
+     * @covers \SincosSoftware\Vipps\Model\Payment\MerchantInfo::getCallBack()
      */
     public function testGetCallBack()
     {
@@ -51,7 +51,7 @@ class MerchantInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\MerchantInfo::setCallBack()
+     * @covers \SincosSoftware\Vipps\Model\Payment\MerchantInfo::setCallBack()
      */
     public function testSetCallBack()
     {
@@ -60,7 +60,7 @@ class MerchantInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\MerchantInfo::getCallBack()
+     * @covers \SincosSoftware\Vipps\Model\Payment\MerchantInfo::getCallBack()
      */
     public function testGetFallBack()
     {
@@ -68,7 +68,7 @@ class MerchantInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\MerchantInfo::setCallBack()
+     * @covers \SincosSoftware\Vipps\Model\Payment\MerchantInfo::setCallBack()
      */
     public function testSetFallBack()
     {

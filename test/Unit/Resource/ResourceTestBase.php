@@ -1,23 +1,23 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource;
+namespace SincosSoftware\Vipps\Tests\Unit\Resource;
 
 use Http\Client\HttpClient;
 use PHPUnit\Framework\TestCase;
-use zaporylie\Vipps\Client;
-use zaporylie\Vipps\Tests\Unit\Authentication\TestTokenStorage;
-use zaporylie\Vipps\Vipps;
+use SincosSoftware\Vipps\Client;
+use SincosSoftware\Vipps\Tests\Unit\Authentication\TestTokenStorage;
+use SincosSoftware\Vipps\Vipps;
 
 abstract class ResourceTestBase extends TestCase
 {
 
     /**
-     * @var \zaporylie\Vipps\Vipps
+     * @var \SincosSoftware\Vipps\Vipps
      */
     protected $vipps;
 
     /**
-     * @var \zaporylie\Vipps\Client
+     * @var \SincosSoftware\Vipps\Client
      */
     protected $client;
 

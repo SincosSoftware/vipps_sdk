@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Model\Payment;
+namespace SincosSoftware\Vipps\Model\Payment;
 
 use JMS\Serializer\Annotation as Serializer;
 
@@ -19,14 +19,14 @@ class ResponseGetPaymentDetails
     protected $orderId;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\TransactionSummary
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\TransactionSummary")
+     * @var \SincosSoftware\Vipps\Model\Payment\TransactionSummary
+     * @Serializer\Type("SincosSoftware\Vipps\Model\Payment\TransactionSummary")
      */
     protected $transactionSummary;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\TransactionLog[]
-     * @Serializer\Type("array<zaporylie\Vipps\Model\Payment\TransactionLog>")
+     * @var \SincosSoftware\Vipps\Model\Payment\TransactionLog[]
+     * @Serializer\Type("array<SincosSoftware\Vipps\Model\Payment\TransactionLog>")
      */
     protected $transactionLogHistory;
 
@@ -43,7 +43,7 @@ class ResponseGetPaymentDetails
     /**
      * Gets transactionSummary value.
      *
-     * @return \zaporylie\Vipps\Model\Payment\TransactionSummary
+     * @return \SincosSoftware\Vipps\Model\Payment\TransactionSummary
      */
     public function getTransactionSummary()
     {
@@ -53,7 +53,7 @@ class ResponseGetPaymentDetails
     /**
      * Gets transactionLogHistory value.
      *
-     * @return \zaporylie\Vipps\Model\Payment\TransactionLog[]
+     * @return \SincosSoftware\Vipps\Model\Payment\TransactionLog[]
      */
     public function getTransactionLogHistory()
     {

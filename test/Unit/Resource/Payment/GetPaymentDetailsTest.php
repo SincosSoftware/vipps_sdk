@@ -1,18 +1,18 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Resource\Payment;
 
 use GuzzleHttp\Psr7\Response;
 use function GuzzleHttp\Psr7\stream_for;
-use zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails;
-use zaporylie\Vipps\Resource\Payment\GetPaymentDetails;
-use zaporylie\Vipps\Resource\HttpMethod;
+use SincosSoftware\Vipps\Model\Payment\ResponseGetPaymentDetails;
+use SincosSoftware\Vipps\Resource\Payment\GetPaymentDetails;
+use SincosSoftware\Vipps\Resource\HttpMethod;
 
 class GetPaymentDetailsTest extends PaymentResourceBaseTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\Payment\GetPaymentDetails
+     * @var \SincosSoftware\Vipps\Resource\Payment\GetPaymentDetails
      */
     protected $resource;
 
@@ -40,8 +40,8 @@ class GetPaymentDetailsTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetPaymentDetails::getBody()
-     * @covers \zaporylie\Vipps\Resource\Payment\GetPaymentDetails::__construct()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\GetPaymentDetails::getBody()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\GetPaymentDetails::__construct()
      */
     public function testBody()
     {
@@ -49,7 +49,7 @@ class GetPaymentDetailsTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetPaymentDetails::getMethod()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\GetPaymentDetails::getMethod()
      */
     public function testMethod()
     {
@@ -57,7 +57,7 @@ class GetPaymentDetailsTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetPaymentDetails::getPath()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\GetPaymentDetails::getPath()
      */
     public function testPath()
     {
@@ -68,7 +68,7 @@ class GetPaymentDetailsTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetPaymentDetails::call()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\GetPaymentDetails::call()
      */
     public function testCall()
     {

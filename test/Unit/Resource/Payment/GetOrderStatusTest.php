@@ -1,18 +1,18 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Resource\Payment;
 
 use GuzzleHttp\Psr7\Response;
 use function GuzzleHttp\Psr7\stream_for;
-use zaporylie\Vipps\Model\Payment\ResponseGetOrderStatus;
-use zaporylie\Vipps\Resource\Payment\GetOrderStatus;
-use zaporylie\Vipps\Resource\HttpMethod;
+use SincosSoftware\Vipps\Model\Payment\ResponseGetOrderStatus;
+use SincosSoftware\Vipps\Resource\Payment\GetOrderStatus;
+use SincosSoftware\Vipps\Resource\HttpMethod;
 
 class GetOrderStatusTest extends PaymentResourceBaseTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\Payment\GetOrderStatus
+     * @var \SincosSoftware\Vipps\Resource\Payment\GetOrderStatus
      */
     protected $resource;
 
@@ -40,8 +40,8 @@ class GetOrderStatusTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetOrderStatus::getBody()
-     * @covers \zaporylie\Vipps\Resource\Payment\GetOrderStatus::__construct()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\GetOrderStatus::getBody()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\GetOrderStatus::__construct()
      */
     public function testBody()
     {
@@ -49,7 +49,7 @@ class GetOrderStatusTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetOrderStatus::getMethod()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\GetOrderStatus::getMethod()
      */
     public function testMethod()
     {
@@ -57,7 +57,7 @@ class GetOrderStatusTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetOrderStatus::getPath()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\GetOrderStatus::getPath()
      */
     public function testPath()
     {
@@ -68,7 +68,7 @@ class GetOrderStatusTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetOrderStatus::call()
+     * @covers \SincosSoftware\Vipps\Resource\Payment\GetOrderStatus::call()
      */
     public function testCall()
     {

@@ -1,18 +1,18 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Api;
+namespace SincosSoftware\Vipps\Tests\Unit\Api;
 
 use PHPUnit\Framework\TestCase;
-use zaporylie\Vipps\Api\Payment;
-use zaporylie\Vipps\Exceptions\Api\InvalidArgumentException;
-use zaporylie\Vipps\Vipps;
+use SincosSoftware\Vipps\Api\Payment;
+use SincosSoftware\Vipps\Exceptions\Api\InvalidArgumentException;
+use SincosSoftware\Vipps\Vipps;
 
 class PaymentTest extends TestCase
 {
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::getMerchantSerialNumber()
-     * @covers \zaporylie\Vipps\Api\Payment::__construct()
+     * @covers \SincosSoftware\Vipps\Api\Payment::getMerchantSerialNumber()
+     * @covers \SincosSoftware\Vipps\Api\Payment::__construct()
      */
     public function testMerchantSerialNumber()
     {

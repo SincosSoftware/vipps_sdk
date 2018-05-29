@@ -1,8 +1,8 @@
 <?php
 
-namespace zaporylie\Vipps\Resource;
+namespace SincosSoftware\Vipps\Resource;
 
-use zaporylie\Vipps\VippsInterface;
+use SincosSoftware\Vipps\VippsInterface;
 
 /**
  * Class AuthorizedResourceBase

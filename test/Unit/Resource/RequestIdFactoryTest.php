@@ -1,15 +1,15 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource;
+namespace SincosSoftware\Vipps\Tests\Unit\Resource;
 
 use PHPUnit\Framework\TestCase;
-use zaporylie\Vipps\Resource\RequestIdFactory;
+use SincosSoftware\Vipps\Resource\RequestIdFactory;
 
 class RequestIdFactoryTest extends TestCase
 {
 
     /**
-     * @covers \zaporylie\Vipps\Resource\RequestIdFactory::generate()
+     * @covers \SincosSoftware\Vipps\Resource\RequestIdFactory::generate()
      */
     public function testGenerate()
     {

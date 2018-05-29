@@ -1,15 +1,15 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\CustomerInfo;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use SincosSoftware\Vipps\Model\Payment\CustomerInfo;
+use SincosSoftware\Vipps\Tests\Unit\Model\ModelTestBase;
 
 class CustomerInfoTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\CustomerInfo
+     * @var \SincosSoftware\Vipps\Model\Payment\CustomerInfo
      */
     protected $model;
 
@@ -23,7 +23,7 @@ class CustomerInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\CustomerInfo::getMobileNumber()
+     * @covers \SincosSoftware\Vipps\Model\Payment\CustomerInfo::getMobileNumber()
      */
     public function testGetMobileNumber()
     {
@@ -31,7 +31,7 @@ class CustomerInfoTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\CustomerInfo::setMobileNumber()
+     * @covers \SincosSoftware\Vipps\Model\Payment\CustomerInfo::setMobileNumber()
      */
     public function testSetMobileNumber()
     {

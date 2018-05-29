@@ -1,21 +1,21 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Authorization;
+namespace SincosSoftware\Vipps\Tests\Unit\Model\Authorization;
 
-use zaporylie\Vipps\Model\Authorization\ResponseGetToken;
-use zaporylie\Vipps\Resource\Authorization\GetToken;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use SincosSoftware\Vipps\Model\Authorization\ResponseGetToken;
+use SincosSoftware\Vipps\Resource\Authorization\GetToken;
+use SincosSoftware\Vipps\Tests\Unit\Model\ModelTestBase;
 
 class ResponseGetTokenTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\Authorization\GetToken
+     * @var \SincosSoftware\Vipps\Resource\Authorization\GetToken
      */
     protected $resource;
 
     /**
-     * @var \zaporylie\Vipps\Model\Authorization\ResponseGetToken
+     * @var \SincosSoftware\Vipps\Model\Authorization\ResponseGetToken
      */
     protected $response;
 
@@ -42,7 +42,7 @@ class ResponseGetTokenTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Authorization\ResponseGetToken::getAccessToken()
+     * @covers \SincosSoftware\Vipps\Model\Authorization\ResponseGetToken::getAccessToken()
      */
     public function testGetAccessToken()
     {
@@ -50,7 +50,7 @@ class ResponseGetTokenTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Authorization\ResponseGetToken::getExpiresIn()
+     * @covers \SincosSoftware\Vipps\Model\Authorization\ResponseGetToken::getExpiresIn()
      */
     public function testGetExpiresIn()
     {
@@ -58,7 +58,7 @@ class ResponseGetTokenTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Authorization\ResponseGetToken::getExtExpiresIn()
+     * @covers \SincosSoftware\Vipps\Model\Authorization\ResponseGetToken::getExtExpiresIn()
      */
     public function testGetExtExpiresIn()
     {
@@ -66,7 +66,7 @@ class ResponseGetTokenTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Authorization\ResponseGetToken::getExpiresOn()
+     * @covers \SincosSoftware\Vipps\Model\Authorization\ResponseGetToken::getExpiresOn()
      */
     public function testGetExpiresOn()
     {
@@ -74,7 +74,7 @@ class ResponseGetTokenTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Authorization\ResponseGetToken::getNotBefore()
+     * @covers \SincosSoftware\Vipps\Model\Authorization\ResponseGetToken::getNotBefore()
      */
     public function testGetNotBefore()
     {
@@ -82,7 +82,7 @@ class ResponseGetTokenTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Authorization\ResponseGetToken::getResource()
+     * @covers \SincosSoftware\Vipps\Model\Authorization\ResponseGetToken::getResource()
      */
     public function testGetResource()
     {
@@ -90,7 +90,7 @@ class ResponseGetTokenTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Authorization\ResponseGetToken::getTokenType()
+     * @covers \SincosSoftware\Vipps\Model\Authorization\ResponseGetToken::getTokenType()
      */
     public function testGetTokenType()
     {

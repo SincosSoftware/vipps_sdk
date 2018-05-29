@@ -1,19 +1,19 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace SincosSoftware\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\RequestRefundPayment;
-use zaporylie\Vipps\Model\Payment\ResponseRefundPayment;
-use zaporylie\Vipps\Model\Payment\TransactionInfo;
-use zaporylie\Vipps\Model\Payment\TransactionSummary;
-use zaporylie\Vipps\Resource\Payment\RefundPayment;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use SincosSoftware\Vipps\Model\Payment\RequestRefundPayment;
+use SincosSoftware\Vipps\Model\Payment\ResponseRefundPayment;
+use SincosSoftware\Vipps\Model\Payment\TransactionInfo;
+use SincosSoftware\Vipps\Model\Payment\TransactionSummary;
+use SincosSoftware\Vipps\Resource\Payment\RefundPayment;
+use SincosSoftware\Vipps\Tests\Unit\Model\ModelTestBase;
 
 class ResponseRefundPaymentTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\ResponseRefundPayment
+     * @var \SincosSoftware\Vipps\Model\Payment\ResponseRefundPayment
      */
     protected $model;
 
@@ -36,7 +36,7 @@ class ResponseRefundPaymentTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseRefundPayment::getOrderId()
+     * @covers \SincosSoftware\Vipps\Model\Payment\ResponseRefundPayment::getOrderId()
      */
     public function testOrderId()
     {
@@ -44,7 +44,7 @@ class ResponseRefundPaymentTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseRefundPayment::getTransactionInfo()
+     * @covers \SincosSoftware\Vipps\Model\Payment\ResponseRefundPayment::getTransactionInfo()
      */
     public function testTransactionInfo()
     {
@@ -52,7 +52,7 @@ class ResponseRefundPaymentTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseRefundPayment::getTransactionSummary()
+     * @covers \SincosSoftware\Vipps\Model\Payment\ResponseRefundPayment::getTransactionSummary()
      */
     public function testTransactionSummary()
     {

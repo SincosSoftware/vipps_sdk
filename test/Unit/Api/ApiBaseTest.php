@@ -1,20 +1,20 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Api;
+namespace SincosSoftware\Vipps\Tests\Unit\Api;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
-use zaporylie\Vipps\Api\ApiBase;
-use zaporylie\Vipps\Client;
-use zaporylie\Vipps\Exceptions\Api\InvalidArgumentException;
-use zaporylie\Vipps\Resource\ResourceInterface;
-use zaporylie\Vipps\Vipps;
+use SincosSoftware\Vipps\Api\ApiBase;
+use SincosSoftware\Vipps\Client;
+use SincosSoftware\Vipps\Exceptions\Api\InvalidArgumentException;
+use SincosSoftware\Vipps\Resource\ResourceInterface;
+use SincosSoftware\Vipps\Vipps;
 
 class ApiBaseTest extends TestCase
 {
 
     /**
-     * @var \zaporylie\Vipps\Api\ApiBase
+     * @var \SincosSoftware\Vipps\Api\ApiBase
      */
     protected $apiBase;
 
@@ -31,9 +31,9 @@ class ApiBaseTest extends TestCase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\ApiBase::getSubscriptionKey()
-     * @covers \zaporylie\Vipps\Api\ApiBase::setSubscriptionKey()
-     * @covers \zaporylie\Vipps\Api\ApiBase::__construct()
+     * @covers \SincosSoftware\Vipps\Api\ApiBase::getSubscriptionKey()
+     * @covers \SincosSoftware\Vipps\Api\ApiBase::setSubscriptionKey()
+     * @covers \SincosSoftware\Vipps\Api\ApiBase::__construct()
      */
     public function testSubscriptionKey()
     {

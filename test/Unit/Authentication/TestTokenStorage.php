@@ -1,9 +1,9 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Authentication;
+namespace SincosSoftware\Vipps\Tests\Unit\Authentication;
 
-use zaporylie\Vipps\Authentication\TokenMemoryCacheStorage;
-use zaporylie\Vipps\Model\Authorization\ResponseGetToken;
+use SincosSoftware\Vipps\Authentication\TokenMemoryCacheStorage;
+use SincosSoftware\Vipps\Model\Authorization\ResponseGetToken;
 
 class TestTokenStorage extends TokenMemoryCacheStorage
 {

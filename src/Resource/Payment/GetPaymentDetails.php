@@ -1,16 +1,16 @@
 <?php
 
-namespace zaporylie\Vipps\Resource\Payment;
+namespace SincosSoftware\Vipps\Resource\Payment;
 
-use zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails;
-use zaporylie\Vipps\Resource\HttpMethod;
-use zaporylie\Vipps\VippsInterface;
+use SincosSoftware\Vipps\Model\Payment\ResponseGetPaymentDetails;
+use SincosSoftware\Vipps\Resource\HttpMethod;
+use SincosSoftware\Vipps\VippsInterface;
 
 class GetPaymentDetails extends PaymentResourceBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\HttpMethod
+     * @var \SincosSoftware\Vipps\Resource\HttpMethod
      */
     protected $method = HttpMethod::GET;
 
@@ -22,7 +22,7 @@ class GetPaymentDetails extends PaymentResourceBase
     /**
      * InitiatePayment constructor.
      *
-     * @param \zaporylie\Vipps\VippsInterface $vipps
+     * @param \SincosSoftware\Vipps\VippsInterface $vipps
      * @param string $subscription_key
      * @param string $merchant_serial_number
      * @param string $order_id
@@ -35,13 +35,13 @@ class GetPaymentDetails extends PaymentResourceBase
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails
+     * @return \SincosSoftware\Vipps\Model\Payment\ResponseGetPaymentDetails
      */
     public function call()
     {
         $response = $this->makeCall();
         $body = $response->getBody()->getContents();
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails $responseObject */
+        /** @var \SincosSoftware\Vipps\Model\Payment\ResponseGetPaymentDetails $responseObject */
         $responseObject = $this
             ->getSerializer()
             ->deserialize(
