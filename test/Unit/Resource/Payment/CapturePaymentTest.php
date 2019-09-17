@@ -59,7 +59,7 @@ class CapturePaymentTest extends PaymentResourceBaseTestBase
      */
     public function testPath()
     {
-        $this->assertEquals('/Ecomm/v1/payments/test_order_id/capture', $this->resource->getPath());
+        $this->assertEquals('/ecomm/v2/payments/test_order_id/capture', $this->resource->getPath());
     }
 
     /**

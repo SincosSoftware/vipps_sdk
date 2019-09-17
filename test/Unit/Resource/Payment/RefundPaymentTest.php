@@ -59,7 +59,7 @@ class RefundPaymentTest extends PaymentResourceBaseTestBase
      */
     public function testPath()
     {
-        $this->assertEquals('/Ecomm/v1/payments/test_order_id/refund', $this->resource->getPath());
+        $this->assertEquals('/ecomm/v2/payments/test_order_id/refund', $this->resource->getPath());
     }
 
     /**
