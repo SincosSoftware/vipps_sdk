@@ -48,11 +48,22 @@ interface PaymentInterface
      * @param string $text
      * @param string $callback
      * @oaram string $fallback
+     * @param string $shipping
+     * @param string $consent
      * @param null $refOrderID
-     *
      * @return \SincosSoftware\Vipps\Model\Payment\ResponseInitiatePayment
+     * @oaram string $fallback
      */
-    public function initiatePayment($order_id, $mobile_number, $amount, $text, $callback, $fallback, $refOrderID = null
+    public function initiatePayment(
+        $order_id,
+        $mobile_number,
+        $amount,
+        $text,
+        $callback,
+        $fallback,
+        $shipping = null,
+        $consent = null,
+        $refOrderID = null
     );
 
     /**
