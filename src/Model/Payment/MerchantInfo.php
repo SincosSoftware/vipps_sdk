@@ -148,4 +148,29 @@ class MerchantInfo
     {
         return $this->shippingDetailsPrefix;
     }
+
+    /**
+     * Sets consent variable.
+     *
+     * @param string $consent
+     *
+     * @return $this
+     */
+    public function setConsent($consent)
+    {
+        $this->consentRemovalPrefix = $consent;
+        $this->setPaymentType();
+
+        return $this;
+    }
+
+    /**
+     * Gets consent value.
+     *
+     * @return string
+     */
+    public function getConsent()
+    {
+        return $this->consentRemovalPrefix;
+    }
 }
