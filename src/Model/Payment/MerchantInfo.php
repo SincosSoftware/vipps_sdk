@@ -36,6 +36,24 @@ class MerchantInfo
      */
     protected $isApp = false;
 
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
+    protected $paymentType;
+
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
+    protected $shippingDetailsPrefix;
+
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     */
+    protected $consentRemovalPrefix;
+
 
     /**
      * Gets merchantSerialNumber value.
