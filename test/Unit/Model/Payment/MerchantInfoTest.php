@@ -75,4 +75,44 @@ class MerchantInfoTest extends ModelTestBase
         $this->assertInstanceOf(MerchantInfo::class, $this->model->setFallBack('http://test.example.com/fallback'));
         $this->assertEquals('http://test.example.com/fallback', $this->model->getFallBack());
     }
+
+    /**
+     * @covers \SincosSoftware\Vipps\Model\Payment\MerchantInfo::setShipping()
+     */
+    public function testSetShipping()
+    {
+        $this->assertInstanceOf(MerchantInfo::class, $this->model->setShipping('http://test.example.com/shipping'));
+        $this->assertEquals('http://test.example.com/shipping', $this->model->getShipping());
+    }
+
+    /**
+     * @covers \SincosSoftware\Vipps\Model\Payment\MerchantInfo::setConsent()
+     */
+    public function testSetConsent()
+    {
+        $this->assertInstanceOf(MerchantInfo::class, $this->model->setConsent('http://test.example.com/consent'));
+        $this->assertEquals('http://test.example.com/consent', $this->model->getConsent());
+    }
+
+    /**
+     * @covers \SincosSoftware\Vipps\Model\Payment\MerchantInfo::setPaymentTypet()
+     */
+    public function testSetPaymentTypeTrue()
+    {
+        $this->assertInstanceOf(MerchantInfo::class, $this->model->setShipping('http://test.example.com/shipping'));
+        $this->assertInstanceOf(MerchantInfo::class, $this->model->setConsent('http://test.example.com/consent'));
+
+        $this->assertEquals('eComm Express Payment', $this->model->getPaymentType());
+    }
+
+    /**
+     * @covers \SincosSoftware\Vipps\Model\Payment\MerchantInfo::setPaymentTypet()
+     */
+    public function testSetPaymentTypeFalse()
+    {
+        $this->assertInstanceOf(MerchantInfo::class, $this->model->setShipping(null));
+        $this->assertInstanceOf(MerchantInfo::class, $this->model->setConsent(null));
+
+        $this->assertEquals(null, $this->model->getPaymentType());
+    }
 }
