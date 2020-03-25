@@ -123,4 +123,29 @@ class MerchantInfo
         $this->fallBack = $fallback;
         return $this;
     }
+
+    /**
+    * Sets shipping variable.
+    *
+    * @param string $shipping
+    *
+    * @return $this
+    */
+    public function setShipping($shipping)
+    {
+        $this->shippingDetailsPrefix = $shipping;
+        $this->setPaymentType();
+
+        return $this;
+    }
+
+    /**
+     * Gets shipping value.
+     *
+     * @return string
+     */
+    public function getShipping()
+    {
+        return $this->shippingDetailsPrefix;
+    }
 }
