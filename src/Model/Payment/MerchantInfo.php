@@ -173,4 +173,23 @@ class MerchantInfo
     {
         return $this->consentRemovalPrefix;
     }
+
+    public function setPaymentType()
+    {
+        if (!is_null($this->getConsent()) && !is_null($this->getShipping())) {
+            $this->paymentType = 'eComm Express Payment';
+        }
+
+        return $this;
+    }
+
+    /**
+     * Gets paymenttype value.
+     *
+     * @return string
+     */
+    public function getPaymentType()
+    {
+        return $this->paymentType;
+    }
 }
