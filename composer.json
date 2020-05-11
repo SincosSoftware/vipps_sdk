@@ -1,6 +1,6 @@
 {
-    "name": "SincosSoftware/vipps",
-    "description": "Vipps by DNB PHP SDK",
+    "name": "sincossoftware/vipps",
+    "description": "Vipps PHP SDK",
     "type": "library",
     "keywords": ["payment"],
     "require": {
