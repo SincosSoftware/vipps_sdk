@@ -10,6 +10,7 @@ namespace SincosSoftware\Vipps;
 
 use SincosSoftware\Vipps\Api\Authorization;
 use SincosSoftware\Vipps\Api\Payment;
+use SincosSoftware\Vipps\Api\Recurring;
 
 /**
  * Class Vipps
@@ -50,6 +51,17 @@ class Vipps implements VippsInterface
     public function payment($subscription_key, $merchant_serial_number)
     {
         return new Payment($this, $subscription_key, $merchant_serial_number);
+    }
+
+    /**
+     * @param string $subscription_key
+     * @param string $merchant_serial_number
+     *
+     * @return \SincosSoftware\Vipps\Api\Recurring
+     */
+    public function recurring($subscription_key, $merchant_serial_number)
+    {
+        return new Recurring($this, $subscription_key, $merchant_serial_number);
     }
 
     /**
