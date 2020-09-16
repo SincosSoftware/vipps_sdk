@@ -47,4 +47,26 @@ class ResponseInitiateAgreement
     {
         return $this->agreementId;
     }
+
+    public function setAgreementResource($agreementResource)
+    {
+        $this->agreementResource = $agreementResource;
+        return $this;
+    }
+
+    public function getAgreementResource()
+    {
+        return $this->agreementResource;
+    }
+
+    public function setUrl($vippsConfirmationUrl)
+    {
+        $this->vippsConfirmationUrl = $vippsConfirmationUrl;
+        return $this;
+    }
+
+    public function getUrl()
+    {
+        return $this->vippsConfirmationUrl;
+    }
 }
