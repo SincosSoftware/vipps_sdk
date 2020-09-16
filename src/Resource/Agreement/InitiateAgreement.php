@@ -31,7 +31,7 @@ class InitiateAgreement extends PaymentResourceBase
      *
      * @param \SincosSoftware\Vipps\VippsInterface $vipps
      * @param string $subscription_key
-     * @param \SincosSoftware\Vipps\Model\Payment\RequestInitiatePayment $requestObject
+     * @param \SincosSoftware\Vipps\Model\Agreement\RequestInitiateAgreement $requestObject
      */
     public function __construct(VippsInterface $vipps, $subscription_key, RequestInitiateAgreement $requestObject)
     {
