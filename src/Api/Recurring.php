@@ -3,6 +3,8 @@
 namespace SincosSoftware\Vipps\Api;
 
 use SincosSoftware\Vipps\Exceptions\Api\InvalidArgumentException;
+use SincosSoftware\Vipps\Model\Agreement\RequestInitiateAgreement;
+use SincosSoftware\Vipps\Resource\Agreement\InitiateAgreement;
 use SincosSoftware\Vipps\VippsInterface;
 
 /**
@@ -44,5 +46,36 @@ class Recurring extends ApiBase implements RecurringInterface
             throw new InvalidArgumentException('Missing merchant serial number');
         }
         return $this->merchantSerialNumber;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function initiateAgreement(
+        $phoneNumber,
+        $price,
+        $productName,
+        $productDescription,
+        $interval,
+        $intervalCount,
+        $redirectUrl,
+        $agreementUrl
+    ) {
+        // Create Request object based on data passed to this method.
+        $request = (new RequestInitiateAgreement(
+            $phoneNumber,
+            $price,
+            $productName,
+            $productDescription,
+            $interval,
+            $intervalCount,
+            $redirectUrl,
+            $agreementUrl
+        ));
+
+        $resource = new InitiateAgreement($this->app, $this->getSubscriptionKey(), $request);
+
+        $response = $resource->call();
+        return $response;
     }
 }
