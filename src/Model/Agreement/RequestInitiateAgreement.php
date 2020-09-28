@@ -24,7 +24,7 @@ class RequestInitiateAgreement
     protected $price;
     protected $productDescription;
     protected $productName;
-    protected $scope = "address birthDate email name phoneNumber";
+    //protected $scope = "address birthDate email name phoneNumber";
 
     public function __construct($phoneNumber, $price, $productName, $productDescription, $interval, $intervalCount, $redirectUrl, $agreementUrl)
     {
