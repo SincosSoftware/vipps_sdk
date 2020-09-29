@@ -5,10 +5,9 @@ namespace SincosSoftware\Vipps\Resource\Agreement;
 use SincosSoftware\Vipps\Model\Agreement\RequestChargeAgreement;
 use SincosSoftware\Vipps\Model\Agreement\ResponseChargeAgreement;
 use SincosSoftware\Vipps\Resource\HttpMethod;
-use SincosSoftware\Vipps\Resource\Payment\PaymentResourceBase;
 use SincosSoftware\Vipps\VippsInterface;
 
-class ChargeAgreement extends PaymentResourceBase
+class ChargeAgreement extends AgreementResourceBase
 {
 
     /**

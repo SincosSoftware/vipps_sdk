@@ -13,7 +13,7 @@ use SincosSoftware\Vipps\VippsInterface;
  *
  * @package Vipps\Resource\Payment
  */
-class InitiateAgreement extends PaymentResourceBase
+class InitiateAgreement extends AgreementResourceBase
 {
 
     /**
