@@ -14,6 +14,6 @@ class RequestChargeAgreement
     {
         $this->amount = $amount * 100;
         $this->description = $description;
-        $this->due = Carbon::now()->addDays(1)->toDateString();
+        $this->due = \Carbon\Carbon::now()->addDays(1)->toDateString();
     }
 }
