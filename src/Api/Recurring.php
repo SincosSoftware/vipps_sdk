@@ -3,7 +3,9 @@
 namespace SincosSoftware\Vipps\Api;
 
 use SincosSoftware\Vipps\Exceptions\Api\InvalidArgumentException;
+use SincosSoftware\Vipps\Model\Agreement\RequestChargeAgreement;
 use SincosSoftware\Vipps\Model\Agreement\RequestInitiateAgreement;
+use SincosSoftware\Vipps\Resource\Agreement\ChargeAgreement;
 use SincosSoftware\Vipps\Resource\Agreement\InitiateAgreement;
 use SincosSoftware\Vipps\Resource\Agreement\GetAgreement;
 use SincosSoftware\Vipps\VippsInterface;
@@ -83,6 +85,14 @@ class Recurring extends ApiBase implements RecurringInterface
     public function getAgreement($agreementId)
     {
         $resource = new GetAgreement($this->app, $this->getSubscriptionKey(), $agreementId);
+        return $resource->call();
+    }
+
+    public function chargeAgreement($agreementId, $amount, $description)
+    {
+        $request = new RequestChargeAgreement($amount, $description);
+
+        $resource = new ChargeAgreement($this->app, $this->getSubscriptionKey(), $agreementId, $request);
         return $resource->call();
     }
 }
