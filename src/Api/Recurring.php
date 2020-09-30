@@ -6,6 +6,7 @@ use SincosSoftware\Vipps\Exceptions\Api\InvalidArgumentException;
 use SincosSoftware\Vipps\Model\Agreement\RequestChargeAgreement;
 use SincosSoftware\Vipps\Model\Agreement\RequestInitiateAgreement;
 use SincosSoftware\Vipps\Resource\Agreement\ChargeAgreement;
+use SincosSoftware\Vipps\Resource\Agreement\GetChargeStatus;
 use SincosSoftware\Vipps\Resource\Agreement\InitiateAgreement;
 use SincosSoftware\Vipps\Resource\Agreement\GetAgreement;
 use SincosSoftware\Vipps\VippsInterface;
@@ -95,4 +96,11 @@ class Recurring extends ApiBase implements RecurringInterface
         $resource = new ChargeAgreement($this->app, $this->getSubscriptionKey(), $agreementId, $request);
         return $resource->call();
     }
+
+    public function getChargeStatus($agreementId, $chargeId)
+    {
+        $resource = new GetChargeStatus($this->app, $this->getSubscriptionKey(), $agreementId, $chargeId);
+        return $resource->call();
+    }
+
 }
