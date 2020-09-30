@@ -122,6 +122,12 @@ abstract class ResourceBase implements ResourceInterface, SerializableInterface
         if (isset($this->id)) {
             $path = str_replace('{id}', $this->id, $path);
         }
+
+        // If ID is set replace {id2} pattern with model's ID.
+        if (isset($this->id2)) {
+            $path = str_replace('{id2}', $this->id2, $path);
+        }
+
         return $path;
     }
 
