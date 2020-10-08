@@ -3,8 +3,6 @@
 namespace SincosSoftware\Vipps\Resource\Agreement;
 
 use SincosSoftware\Vipps\Model\Agreement\RequestPauseAgreement;
-use SincosSoftware\Vipps\Model\Agreement\RequestStopAgreement;
-use SincosSoftware\Vipps\Model\Agreement\ResponseGetAgreement;
 use SincosSoftware\Vipps\Model\Agreement\ResponseUpdateAgreement;
 use SincosSoftware\Vipps\Resource\HttpMethod;
 use SincosSoftware\Vipps\Resource\Payment\PaymentResourceBase;
@@ -29,8 +27,8 @@ class PauseAgreement extends PaymentResourceBase
      *
      * @param \SincosSoftware\Vipps\VippsInterface $vipps
      * @param string $subscription_key
-     * @param string $merchant_serial_number
-     * @param string $order_id
+     * @param $agreementId
+     * @param RequestPauseAgreement $request
      */
     public function __construct(VippsInterface $vipps, $subscription_key, $agreementId, RequestPauseAgreement $request)
     {

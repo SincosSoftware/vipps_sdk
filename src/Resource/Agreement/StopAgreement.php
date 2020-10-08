@@ -27,8 +27,8 @@ class StopAgreement extends PaymentResourceBase
      *
      * @param \SincosSoftware\Vipps\VippsInterface $vipps
      * @param string $subscription_key
-     * @param string $merchant_serial_number
-     * @param string $order_id
+     * @param $agreementId
+     * @param RequestStopAgreement $request
      */
     public function __construct(VippsInterface $vipps, $subscription_key, $agreementId, RequestStopAgreement $request)
     {
