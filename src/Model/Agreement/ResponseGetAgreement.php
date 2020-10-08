@@ -87,4 +87,14 @@ class ResponseGetAgreement
     {
         return $this->status;
     }
+
+    /**
+     * Gets status value.
+     *
+     * @return string
+     */
+    public function getProductName()
+    {
+        return $this->productName;
+    }
 }
