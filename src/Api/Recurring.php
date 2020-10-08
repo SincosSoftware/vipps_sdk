@@ -10,6 +10,7 @@ use SincosSoftware\Vipps\Model\Agreement\RequestPauseAgreement;
 use SincosSoftware\Vipps\Model\Agreement\RequestStopAgreement;
 use SincosSoftware\Vipps\Resource\Agreement\ChargeAgreement;
 use SincosSoftware\Vipps\Resource\Agreement\ContinueAgreement;
+use SincosSoftware\Vipps\Resource\Agreement\GetAllAgreements;
 use SincosSoftware\Vipps\Resource\Agreement\GetChargeStatus;
 use SincosSoftware\Vipps\Resource\Agreement\InitiateAgreement;
 use SincosSoftware\Vipps\Resource\Agreement\GetAgreement;
@@ -129,6 +130,12 @@ class Recurring extends ApiBase implements RecurringInterface
     public function getChargeStatus($agreementId, $chargeId)
     {
         $resource = new GetChargeStatus($this->app, $this->getSubscriptionKey(), $agreementId, $chargeId);
+        return $resource->call();
+    }
+
+    public function getAll()
+    {
+        $resource = new GetAllAgreements($this->app, $this->getSubscriptionKey());
         return $resource->call();
     }
 
