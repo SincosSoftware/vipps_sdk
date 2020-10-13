@@ -7,6 +7,7 @@ use SincosSoftware\Vipps\Model\Agreement\RequestChargeAgreement;
 use SincosSoftware\Vipps\Model\Agreement\RequestContinueAgreement;
 use SincosSoftware\Vipps\Model\Agreement\RequestInitiateAgreement;
 use SincosSoftware\Vipps\Model\Agreement\RequestPauseAgreement;
+use SincosSoftware\Vipps\Model\Agreement\RequestRefundCharge;
 use SincosSoftware\Vipps\Model\Agreement\RequestStopAgreement;
 use SincosSoftware\Vipps\Resource\Agreement\ChargeAgreement;
 use SincosSoftware\Vipps\Resource\Agreement\ContinueAgreement;
@@ -15,6 +16,7 @@ use SincosSoftware\Vipps\Resource\Agreement\GetChargeStatus;
 use SincosSoftware\Vipps\Resource\Agreement\InitiateAgreement;
 use SincosSoftware\Vipps\Resource\Agreement\GetAgreement;
 use SincosSoftware\Vipps\Resource\Agreement\PauseAgreement;
+use SincosSoftware\Vipps\Resource\Agreement\RefundCharge;
 use SincosSoftware\Vipps\Resource\Agreement\StopAgreement;
 use SincosSoftware\Vipps\VippsInterface;
 
@@ -139,4 +141,10 @@ class Recurring extends ApiBase implements RecurringInterface
         return $resource->call();
     }
 
+    public function refundCharge($agreementId, $chargeId, $amount)
+    {
+        $request = new RequestRefundCharge($amount);
+        $resource = new RefundCharge($this->app, $this->getSubscriptionKey(), $request, $agreementId, $chargeId);
+        return $resource->call();
+    }
 }
