@@ -18,7 +18,7 @@ class GetChargeStatus extends AgreementResourceBase
      */
     protected $path = '/recurring/v2/agreements/{id}/charges/{id2}';
 
-    public function __construct(VippsInterface $vipps, $subscription_key,  $agreement_id, $charge_id)
+    public function __construct(VippsInterface $vipps, $subscription_key, $agreement_id, $charge_id)
     {
         parent::__construct($vipps, $subscription_key);
         $this->id = $agreement_id;
