@@ -14,6 +14,6 @@ class SystemInfoTest extends TestCase
     {
         $systemInfo = new SystemInfo('Vipps-System-Name');
 
-        $this->assertEquals('Vipps-System-Name', $systemInfo->getName());
+        $this->assertEquals('Vipps-System-Name', $systemInfo->getSystemName());
     }
 }
