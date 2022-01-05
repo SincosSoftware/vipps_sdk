@@ -29,7 +29,7 @@ class VippsTest extends TestCase
     {
         parent::setUp();
         $this->client = $this->createMock(ClientInterface::class);
-        $this->vipps = new Vipps($this->client);
+        $this->vipps = new Vipps($this->client, 'merchantSerialNumber');
     }
 
     /**

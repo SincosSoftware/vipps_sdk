@@ -37,6 +37,6 @@ abstract class ResourceTestBase extends TestCase
             'http_client' => $this->httpClient,
             'token_storage' => new TestTokenStorage(),
         ]);
-        $this->vipps = new Vipps($this->client);
+        $this->vipps = new Vipps($this->client, 'merchantSerialNumber');
     }
 }

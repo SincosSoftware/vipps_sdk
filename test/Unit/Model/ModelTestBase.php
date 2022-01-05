@@ -44,6 +44,6 @@ abstract class ModelTestBase extends TestCase
 
 
         // Get Vipps.
-        $this->vipps = new Vipps($this->client);
+        $this->vipps = new Vipps($this->client, 'merchantSerialNumber');
     }
 }

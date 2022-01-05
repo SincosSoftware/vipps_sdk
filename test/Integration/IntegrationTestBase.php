@@ -54,7 +54,7 @@ abstract class IntegrationTestBase extends TestCase
             'token_storage' => new TestTokenStorage(),
         ]);
 
-        $this->vipps = new Vipps($this->client);
+        $this->vipps = new Vipps($this->client, 'merchantSerialNumber');
     }
 
     /**

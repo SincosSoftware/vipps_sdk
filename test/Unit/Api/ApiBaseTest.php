@@ -25,7 +25,7 @@ class ApiBaseTest extends TestCase
     {
         parent::setUp();
         $this->apiBase = $this->getMockForAbstractClass(ApiBase::class, [
-            new Vipps(new Client('test')),
+            new Vipps(new Client('test'), 'merchantSerialNumber'),
             'test_subscription_key'
         ]);
     }
