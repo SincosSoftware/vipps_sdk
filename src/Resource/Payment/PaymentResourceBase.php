@@ -51,9 +51,9 @@ abstract class PaymentResourceBase extends AuthorizedResourceBase
             ?:getenv('REMOTE_ADDR')
             ?:gethostname();
 
-        $this->headers['Vipps-System-Name'] = 'Name';
-        $this->headers['Vipps-System-Version'] =  'Version';
-        $this->headers['Vipps-System-Plugin-Name'] = 'Plugin-Name';
-        $this->headers['Vipps-System-Plugin-Version'] = 'Plugin-Version';
+        $this->headers['Vipps-System-Name'] = $this->app->getSystemInfo()->getSystemName();
+        $this->headers['Vipps-System-Version'] =  $this->app->getSystemInfo()->getSystemVersion();
+        $this->headers['Vipps-System-Plugin-Name'] = $this->app->getSystemInfo()->getSystemPluginName();
+        $this->headers['Vipps-System-Plugin-Version'] = $this->app->getSystemInfo()->getSystemPluginVersion();
     }
 }
