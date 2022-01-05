@@ -20,6 +20,14 @@ interface VippsInterface
      */
     public function getClient();
 
+
+    /**
+     * Gets Merchant Serial number.
+     *
+     * @return string
+     */
+    public function getMerchantSerialNumber();
+
     /**
      * @param string $subscription_key
      *

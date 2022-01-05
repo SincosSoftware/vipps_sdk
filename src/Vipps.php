@@ -46,6 +46,14 @@ class Vipps implements VippsInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function getMerchantSerialNumber()
+    {
+        return $this->merchantSerialNumber;
+    }
+
+    /**
      * @param string $subscription_key
      * @param string $merchant_serial_number
      *
