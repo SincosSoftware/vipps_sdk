@@ -12,8 +12,16 @@ class SystemInfoTest extends TestCase
      */
     public function testConstruct()
     {
-        $systemInfo = new SystemInfo('Vipps-System-Name');
+        $systemInfo = new SystemInfo(
+            'Vipps-System-Name',
+            'Vipps-System-Version',
+            'Vipps-System-Plugin-Name',
+            'Vipps-System-Plugin-Version'
+        );
 
         $this->assertEquals('Vipps-System-Name', $systemInfo->getSystemName());
+        $this->assertEquals('Vipps-System-Version', $systemInfo->getSystemVersion());
+        $this->assertEquals('Vipps-System-Plugin-Name', $systemInfo->getSystemPluginName());
+        $this->assertEquals('Vipps-System-Plugin-Version', $systemInfo->getSystemPluginVersion());
     }
 }
