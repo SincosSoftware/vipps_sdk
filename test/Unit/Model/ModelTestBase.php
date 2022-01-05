@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use SincosSoftware\Vipps\Authentication\TokenStorageInterface;
 use SincosSoftware\Vipps\Client;
 use SincosSoftware\Vipps\Tests\Unit\Authentication\TestTokenStorage;
+use SincosSoftware\Vipps\Tests\Unit\SystemInfoDummy;
 use SincosSoftware\Vipps\Vipps;
 
 abstract class ModelTestBase extends TestCase
@@ -44,6 +45,6 @@ abstract class ModelTestBase extends TestCase
 
 
         // Get Vipps.
-        $this->vipps = new Vipps($this->client, 'merchantSerialNumber');
+        $this->vipps = new Vipps($this->client, 'merchantSerialNumber', new SystemInfoDummy);
     }
 }

@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use SincosSoftware\Vipps\Api\Authorization;
 use SincosSoftware\Vipps\Api\Payment;
 use SincosSoftware\Vipps\ClientInterface;
+use SincosSoftware\Vipps\SystemInfoInterface;
 use SincosSoftware\Vipps\Vipps;
 use SincosSoftware\Vipps\VippsInterface;
 
@@ -29,7 +30,7 @@ class VippsTest extends TestCase
     {
         parent::setUp();
         $this->client = $this->createMock(ClientInterface::class);
-        $this->vipps = new Vipps($this->client, 'merchantSerialNumber');
+        $this->vipps = new Vipps($this->client, 'merchantSerialNumber', new SystemInfoDummy);
     }
 
     /**

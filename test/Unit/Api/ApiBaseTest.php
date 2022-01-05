@@ -8,6 +8,7 @@ use SincosSoftware\Vipps\Api\ApiBase;
 use SincosSoftware\Vipps\Client;
 use SincosSoftware\Vipps\Exceptions\Api\InvalidArgumentException;
 use SincosSoftware\Vipps\Resource\ResourceInterface;
+use SincosSoftware\Vipps\Tests\Unit\SystemInfoDummy;
 use SincosSoftware\Vipps\Vipps;
 
 class ApiBaseTest extends TestCase
@@ -25,7 +26,7 @@ class ApiBaseTest extends TestCase
     {
         parent::setUp();
         $this->apiBase = $this->getMockForAbstractClass(ApiBase::class, [
-            new Vipps(new Client('test'), 'merchantSerialNumber'),
+            new Vipps(new Client('test'), 'merchantSerialNumber', new SystemInfoDummy),
             'test_subscription_key'
         ]);
     }

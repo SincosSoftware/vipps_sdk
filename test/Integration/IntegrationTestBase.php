@@ -4,6 +4,7 @@ namespace SincosSoftware\Vipps\Tests\Integration;
 
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
+use SincosSoftware\Vipps\Tests\Unit\SystemInfoDummy;
 use function GuzzleHttp\Psr7\stream_for;
 use Http\Client\Exception\HttpException;
 use Http\Client\HttpClient;
@@ -54,7 +55,7 @@ abstract class IntegrationTestBase extends TestCase
             'token_storage' => new TestTokenStorage(),
         ]);
 
-        $this->vipps = new Vipps($this->client, 'merchantSerialNumber');
+        $this->vipps = new Vipps($this->client, 'merchantSerialNumber', new SystemInfoDummy);
     }
 
     /**
