@@ -24,14 +24,17 @@ class Vipps implements VippsInterface
      */
     protected $client;
 
+    protected $merchantSerialNumber;
+
     /**
      * Vipps constructor.
      *
      * @param \SincosSoftware\Vipps\ClientInterface $client
      */
-    public function __construct(ClientInterface $client)
+    public function __construct(ClientInterface $client, $merchantSerialNumber)
     {
         $this->client = $client;
+        $this->merchantSerialNumber = $merchantSerialNumber;
     }
 
     /**
