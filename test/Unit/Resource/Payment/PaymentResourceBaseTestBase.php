@@ -29,5 +29,8 @@ class PaymentResourceBaseTestBase extends ResourceTestBase
         $this->assertNotEmpty($headers['X-TimeStamp']);
         $this->assertArrayHasKey('X-Request-Id', $headers);
         $this->assertNotEmpty($headers['X-Request-Id']);
+
+        $this->assertArrayHasKey('Merchant-Serial-Number', $headers);
+        $this->assertNotEmpty($headers['Merchant-Serial-Number']);
     }
 }
