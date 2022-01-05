@@ -30,6 +30,7 @@ class Vipps implements VippsInterface
      * Vipps constructor.
      *
      * @param \SincosSoftware\Vipps\ClientInterface $client
+     * @param $merchantSerialNumber
      */
     public function __construct(ClientInterface $client, $merchantSerialNumber)
     {
