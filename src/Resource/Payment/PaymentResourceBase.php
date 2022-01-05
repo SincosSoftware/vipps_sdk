@@ -34,6 +34,8 @@ abstract class PaymentResourceBase extends AuthorizedResourceBase
         // Client ID must be set in X-App-Id header.
         $this->headers['X-App-Id'] = $this->app->getClient()->getClientId();
 
+        $this->headers['Merchant-Serial-Number'] = $this->app->getMerchantSerialNumber();
+
         // By default RequestID is different for each Resource object.
         $this->headers['X-Request-Id'] = RequestIdFactory::generate();
 
