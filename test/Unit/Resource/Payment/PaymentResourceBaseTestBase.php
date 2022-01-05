@@ -32,5 +32,14 @@ class PaymentResourceBaseTestBase extends ResourceTestBase
 
         $this->assertArrayHasKey('Merchant-Serial-Number', $headers);
         $this->assertNotEmpty($headers['Merchant-Serial-Number']);
+
+        $this->assertArrayHasKey('Vipps-System-Name', $headers);
+        $this->assertNotEmpty($headers['Vipps-System-Name']);
+        $this->assertArrayHasKey('Vipps-System-Version', $headers);
+        $this->assertNotEmpty($headers['Vipps-System-Version']);
+        $this->assertArrayHasKey('Vipps-System-Plugin-Name', $headers);
+        $this->assertNotEmpty($headers['Vipps-System-Plugin-Name']);
+        $this->assertArrayHasKey('Vipps-System-Plugin-Version', $headers);
+        $this->assertNotEmpty($headers['Vipps-System-Plugin-Version']);
     }
 }
