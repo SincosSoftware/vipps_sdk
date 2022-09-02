@@ -72,7 +72,7 @@ class Transaction
     }
     
     /**
-     * Gets amount value.
+     * Gets useExplicitCheckoutFlow value.
      *
      * @return bool
      */
