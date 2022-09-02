@@ -82,9 +82,9 @@ class Transaction
     }
     
     /**
-     * Sets amount variable.
+     * Sets useExplicitCheckoutFlow variable.
      *
-     * @param int $amount
+     * @param boolean $useExplicitCheckoutFlow
      *
      * @return $this
      */
