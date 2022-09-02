@@ -144,7 +144,7 @@ class Payment extends ApiBase implements PaymentInterface
     /**
      * {@inheritdoc}
      */
-    public function initiatePayment($order_id, $mobile_number, $amount, $text, $callback, $fallback, $shipping = null, $consent = null, $refOrderID = null)
+    public function initiatePayment($order_id, $mobile_number, $amount, $text, $callback, $fallback, $shipping = null, $consent = null, $refOrderID = null, $useExplicitCheckoutFlow = false)
     {
         // Create Request object based on data passed to this method.
         $request = (new RequestInitiatePayment())
@@ -166,6 +166,7 @@ class Payment extends ApiBase implements PaymentInterface
                     ->setAmount($amount)
                     ->setOrderId($order_id)
                     ->setRefOrderId($refOrderID)
+                    ->setUseExplicitCheckoutFlow($useExplicitCheckoutFlow)
             );
         // Pass request object along with all data required by InitiatePayment
         // to make a call.
