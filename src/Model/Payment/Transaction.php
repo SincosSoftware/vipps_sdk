@@ -37,12 +37,6 @@ class Transaction
     protected $amount;
     
     /**
-     * @var bool
-     * @Serializer\Type("boolean")
-     */
-    protected $useExplicitCheckoutFlow;
-    
-    /**
      * @var string
      * @Serializer\Type("string")
      */
@@ -87,29 +81,6 @@ class Transaction
         return $this->useExplicitCheckoutFlow;
     }
     
-    /**
-     * Sets useExplicitCheckoutFlow variable.
-     *
-     * @param boolean $useExplicitCheckoutFlow
-     *
-     * @return $this
-     */
-    public function setUseExplicitCheckoutFlow($useExplicitCheckoutFlow)
-    {
-        $this->useExplicitCheckoutFlow = $useExplicitCheckoutFlow;
-        return $this;
-    }
-
-    /**
-     * Gets amount value.
-     *
-     * @return bool
-     */
-    public function getUseExplicitCheckoutFlow()
-    {
-        return $this->useExplicitCheckoutFlow;
-    }
-
     /**
      * Sets useExplicitCheckoutFlow variable.
      *
