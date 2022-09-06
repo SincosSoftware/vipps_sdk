@@ -25,6 +25,18 @@ class ResponseGetPaymentDetails
     protected $transactionSummary;
 
     /**
+     * @var \SincosSoftware\Vipps\Model\Payment\ShippingDetails
+     * @Serializer\Type("SincosSoftware\Vipps\Model\Payment\ShippingDetails")
+     */
+    protected $shippingDetails;
+
+    /**
+     * @var \SincosSoftware\Vipps\Model\Payment\UserDetails
+     * @Serializer\Type("SincosSoftware\Vipps\Model\Payment\UserDetails")
+     */
+    protected $userDetails;
+
+    /**
      * @var \SincosSoftware\Vipps\Model\Payment\TransactionLog[]
      * @Serializer\Type("array<SincosSoftware\Vipps\Model\Payment\TransactionLog>")
      */
@@ -48,6 +60,26 @@ class ResponseGetPaymentDetails
     public function getTransactionSummary()
     {
         return $this->transactionSummary;
+    }
+
+    /**
+     * Gets transactionSummary value.
+     *
+     * @return \SincosSoftware\Vipps\Model\Payment\ShippingDetails
+     */
+    public function getShippingDetails()
+    {
+        return $this->shippingDetails;
+    }
+
+    /**
+     * Gets transactionSummary value.
+     *
+     * @return \SincosSoftware\Vipps\Model\Payment\UserDetails
+     */
+    public function getUserDetails()
+    {
+        return $this->userDetails;
     }
 
     /**
